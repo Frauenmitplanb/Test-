@@ -132,6 +132,18 @@
     cursor.style.display = "none";
   }
 
+  /* ---------- Contact form (demo — no backend wired up yet) ---------- */
+  var form = document.getElementById("contact-form");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var status = document.getElementById("form-status");
+      if (status) {
+        status.textContent = "Demo-Formular: Es ist noch kein echtes Postfach angebunden. Bitte nutze aktuell die WhatsApp-Community.";
+      }
+    });
+  }
+
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();

@@ -33,6 +33,30 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: auto; }
+
+/* ---------- Demo banner ---------- */
+.demo-banner {
+  background: var(--color-ink);
+  color: var(--color-sand);
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.55rem 1rem;
+}
+.demo-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-forest);
+  background: var(--color-cream);
+  border: 1px solid rgba(93,110,96,0.35);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
 body {
   margin: 0;
   background: var(--color-paper);
@@ -103,6 +127,18 @@ p { margin: 0 0 1em; }
 .btn--small { padding: 0.6rem 1.3rem; font-size: 0.85rem; }
 .btn--light { background: var(--color-sand); color: var(--color-ink); }
 .btn--light:hover { background: var(--color-paper); }
+.btn--whatsapp { background: var(--color-forest); color: var(--color-paper); }
+.btn--whatsapp:hover { background: #4a584c; }
+.btn--outline { background: transparent; color: var(--color-ink); box-shadow: inset 0 0 0 1.5px rgba(35,39,34,0.35); }
+.btn--outline:hover { background: var(--color-ink); color: var(--color-paper); }
+
+.cta-duo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
 
 .link-underline {
   position: relative;
@@ -384,6 +420,67 @@ p { margin: 0 0 1em; }
   color: rgba(35,39,34,0.6);
 }
 .site-footer__legal { display: flex; gap: 1.25rem; }
+
+/* ---------- Team ---------- */
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  margin-top: 2.5rem;
+}
+@media (max-width: 720px) { .team__grid { grid-template-columns: 1fr; } }
+.team-card__media { aspect-ratio: 4 / 5; margin-bottom: 1.25rem; }
+.team-card h3 { margin-bottom: 0.25rem; }
+.team-card__role { display: block; font-size: 0.85rem; color: var(--color-forest); font-weight: 700; margin-bottom: 0.9rem; }
+
+/* ---------- Offer cards (Produkte) ---------- */
+.offers__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  text-align: left;
+}
+@media (max-width: 940px) { .offers__grid { grid-template-columns: 1fr; } }
+.offer-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.25rem;
+  background: var(--color-white);
+  border: 1px solid rgba(35,39,34,0.08);
+  border-radius: 10px;
+}
+.offer-card--highlight { border-color: var(--color-sand); background: var(--color-cream); }
+.offer-card h3 { margin-bottom: 0.6rem; }
+.offer-card__for { font-size: 0.85rem; color: var(--color-forest); font-weight: 600; margin-bottom: 1rem; }
+.offer-card ul { margin: 0 0 1.5rem; padding-left: 1.1rem; font-size: 0.95rem; }
+.offer-card ul li { margin-bottom: 0.4rem; }
+.offer-card .btn { margin-top: auto; align-self: flex-start; }
+
+/* ---------- Contact form ---------- */
+.contact-form { max-width: 560px; margin-top: 2rem; display: grid; gap: 1.1rem; }
+.contact-form label { display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 0.4rem; }
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(35,39,34,0.2);
+  border-radius: 6px;
+  background: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-ink);
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-forest);
+}
+.contact-form textarea { resize: vertical; min-height: 140px; }
+.contact-form__status { font-size: 0.9rem; color: var(--color-forest); font-weight: 600; min-height: 1.2em; }
+.contact-alt {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(35,39,34,0.1);
+}
 
 /* ---------- Reveal base states (JS toggles .is-visible) ---------- */
 [data-reveal], [data-reveal-text] { opacity: 0; }

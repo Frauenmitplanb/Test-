@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt & Erstgespräch – Frauen mit Plan B</title>
+<meta name="description" content="Lern uns unverbindlich kennen – schreib uns oder komm direkt in unsere WhatsApp-Community.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="demo-banner">🚧 DEMO – Formular ist noch nicht mit einem echten Postfach verbunden.</div>
+
+<div class="preloader" id="preloader"><span class="preloader__word">Frauen mit Plan B</span></div>
+<div class="cursor" id="cursor"></div>
+
+<header class="site-header" data-reveal>
+  <a href="index.html" class="logo">Frauen mit&nbsp;<em>Plan B</em></a>
+  <nav class="nav">
+    <a href="ueber-uns.html" data-magnetic>Über uns</a>
+    <a href="team.html" data-magnetic>Team</a>
+    <a href="produkte.html" data-magnetic>Produkte</a>
+  </nav>
+  <a href="kontakt.html" class="btn btn--small" data-magnetic>Erstgespräch</a>
+</header>
+
+<main>
+  <section class="section" style="padding-top: clamp(3rem, 6vw, 5rem);">
+    <p class="eyebrow" data-reveal-text>Erstgespräch &amp; Fragen</p>
+    <h1 data-reveal-text>Lern uns unverbindlich kennen</h1>
+    <p style="max-width: 600px; font-size: 1.1rem;" data-reveal>
+      Erzähl uns kurz, wo du gerade stehst – wir melden uns persönlich bei dir. Kein Verkaufsgespräch,
+      sondern ein ehrlicher erster Austausch.
+    </p>
+
+    <form class="contact-form" id="contact-form" data-reveal>
+      <span class="demo-tag">DEMO – noch ohne echtes Postfach</span>
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="message">Deine Nachricht</label>
+        <textarea id="message" name="message" placeholder="Wo stehst du gerade und was möchtest du erreichen?" required></textarea>
+      </div>
+      <button type="submit" class="btn" data-magnetic style="justify-self: start;">Nachricht senden</button>
+      <p class="contact-form__status" id="form-status"></p>
+    </form>
+
+    <div class="contact-alt">
+      <p class="eyebrow" data-reveal-text>Lieber unverbindlich reinschnuppern?</p>
+      <h3 style="margin-bottom: 1rem;">Komm in unsere Deep Dive Community</h3>
+      <a href="https://chat.whatsapp.com/IW5fSFVLf0m64qhpKW02oG?s=cl&amp;p=i&amp;mlu=0&amp;ilr=4" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer" data-magnetic>Zur WhatsApp-Community</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__top">
+    <span class="logo">Frauen mit&nbsp;<em>Plan B</em></span>
+    <nav class="nav">
+      <a href="ueber-uns.html" data-magnetic>Über uns</a>
+      <a href="team.html" data-magnetic>Team</a>
+      <a href="produkte.html" data-magnetic>Produkte</a>
+      <a href="kontakt.html" data-magnetic>Kontakt</a>
+    </nav>
+  </div>
+  <div class="site-footer__bottom">
+    <span>&copy; <span id="year"></span> Frauen mit Plan B</span>
+    <div class="site-footer__legal">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
