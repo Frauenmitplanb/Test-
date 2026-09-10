@@ -107,35 +107,19 @@
     revealTextEls.forEach(function (el) { el.classList.add("is-visible"); el.style.opacity = 1; });
   }
 
-  /* ---------- Custom cursor + magnetic buttons ---------- */
-  var cursor = document.getElementById("cursor");
-  if (cursor && !isTouch) {
-    var mx = 0, my = 0, cx = 0, cy = 0;
-    window.addEventListener("mousemove", function (e) { mx = e.clientX; my = e.clientY; });
-    (function tick() {
-      cx += (mx - cx) * 0.18;
-      cy += (my - cy) * 0.18;
-      cursor.style.transform = "translate(" + cx + "px," + cy + "px)";
-      requestAnimationFrame(tick);
-    })();
-
+  /* ---------- Magnetic buttons (subtle hover pull, no custom cursor) ---------- */
+  if (!isTouch && hasGSAP && !reduceMotion) {
     document.querySelectorAll("[data-magnetic]").forEach(function (el) {
-      el.addEventListener("mouseenter", function () { cursor.classList.add("is-active"); });
       el.addEventListener("mouseleave", function () {
-        cursor.classList.remove("is-active");
-        if (hasGSAP) gsap.to(el, { x: 0, y: 0, duration: 0.5, ease: "elastic.out(1, 0.4)" });
+        gsap.to(el, { x: 0, y: 0, duration: 0.5, ease: "elastic.out(1, 0.4)" });
       });
-      if (hasGSAP && !reduceMotion) {
-        el.addEventListener("mousemove", function (e) {
-          var rect = el.getBoundingClientRect();
-          var relX = e.clientX - rect.left - rect.width / 2;
-          var relY = e.clientY - rect.top - rect.height / 2;
-          gsap.to(el, { x: relX * 0.3, y: relY * 0.3, duration: 0.3, ease: "power2.out" });
-        });
-      }
+      el.addEventListener("mousemove", function (e) {
+        var rect = el.getBoundingClientRect();
+        var relX = e.clientX - rect.left - rect.width / 2;
+        var relY = e.clientY - rect.top - rect.height / 2;
+        gsap.to(el, { x: relX * 0.25, y: relY * 0.25, duration: 0.3, ease: "power2.out" });
+      });
     });
-  } else if (cursor) {
-    cursor.style.display = "none";
   }
 
   /* ---------- Contact form (demo — no backend wired up yet) ---------- */
