@@ -429,7 +429,15 @@ p { margin: 0 0 1em; }
   margin-top: 2.5rem;
 }
 @media (max-width: 720px) { .team__grid { grid-template-columns: 1fr; } }
-.team-card__media { aspect-ratio: 4 / 5; margin-bottom: 1.25rem; }
+.team-card__media {
+  aspect-ratio: 4 / 5;
+  margin-bottom: 1.25rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: 4px;
+  background: var(--color-cream);
+}
 .team-card h3 { margin-bottom: 0.25rem; }
 .team-card__role { display: block; font-size: 0.85rem; color: var(--color-forest); font-weight: 700; margin-bottom: 0.9rem; }
 
