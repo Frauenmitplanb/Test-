@@ -9,16 +9,21 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var isTouch = window.matchMedia("(hover: none)").matches;
 
-  /* ---------- Preloader ---------- */
+  /* ---------- Preloader ----------
+     Never lets a slow/blocked CDN hold the page hostage: pointer-events
+     is off from the start (see CSS), and a hard timeout guarantees the
+     overlay disappears even if the "load" event never fires. */
   var preloader = document.getElementById("preloader");
+  var preloaderHidden = false;
   function hidePreloader() {
-    if (!preloader) return;
+    if (!preloader || preloaderHidden) return;
+    preloaderHidden = true;
     if (window.gsap) {
       gsap.to(preloader.querySelector(".preloader__word"), {
         opacity: 1, y: 0, duration: 0.6, ease: "power2.out"
       });
       gsap.to(preloader, {
-        opacity: 0, duration: 0.6, delay: 0.5, ease: "power2.inOut",
+        opacity: 0, duration: 0.6, delay: 0.3, ease: "power2.inOut",
         onComplete: function () { preloader.style.display = "none"; }
       });
     } else {
@@ -28,6 +33,7 @@
   window.addEventListener("load", function () {
     setTimeout(hidePreloader, reduceMotion ? 0 : 300);
   });
+  setTimeout(hidePreloader, 2000);
 
   /* ---------- GSAP setup ---------- */
   var hasGSAP = !!window.gsap;
@@ -143,6 +149,24 @@
       }
     });
   }
+
+  /* ---------- Mobile nav toggle ---------- */
+  document.querySelectorAll(".nav-toggle").forEach(function (btn) {
+    var nav = btn.parentElement.querySelector(".nav");
+    if (!nav) return;
+    btn.addEventListener("click", function () {
+      var open = nav.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.textContent = open ? "✕" : "☰";
+    });
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        nav.classList.remove("is-open");
+        btn.setAttribute("aria-expanded", "false");
+        btn.textContent = "☰";
+      });
+    });
+  });
 
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById("year");
