@@ -179,6 +179,8 @@ p { margin: 0 0 1em; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 1rem;
   padding: 1.25rem clamp(1.5rem, 4vw, 3rem);
   background: rgba(251, 249, 245, 0.85);
   backdrop-filter: blur(10px);
@@ -200,8 +202,20 @@ p { margin: 0 0 1em; }
   padding: 0.25rem 0.4rem;
 }
 
-@media (max-width: 720px) {
-  .site-header { position: relative; flex-wrap: wrap; }
+/* Medium widths (tablet, or a narrowed desktop window): nav wraps to
+   its own centered row instead of hiding behind a hamburger. */
+@media (max-width: 860px) and (min-width: 561px) {
+  .site-header .nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+  }
+}
+
+/* True small screens: collapse into a hamburger-triggered dropdown. */
+@media (max-width: 560px) {
+  .site-header { position: relative; }
   .site-header .nav {
     display: none;
     order: 3;
