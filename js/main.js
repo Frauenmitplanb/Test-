@@ -107,7 +107,27 @@
     revealTextEls.forEach(function (el) { el.classList.add("is-visible"); el.style.opacity = 1; });
   }
 
-  /* ---------- Magnetic buttons (subtle hover pull, no custom cursor) ---------- */
+  /* ---------- Custom cursor (letter B) ---------- */
+  var cursorB = document.getElementById("cursor-b");
+  if (cursorB && !isTouch) {
+    var bx = 0, by = 0, bcx = 0, bcy = 0;
+    window.addEventListener("mousemove", function (e) { bx = e.clientX; by = e.clientY; });
+    (function tick() {
+      bcx += (bx - bcx) * 0.22;
+      bcy += (by - bcy) * 0.22;
+      var scale = cursorB.classList.contains("is-active") ? 1.3 : 1;
+      cursorB.style.transform = "translate(" + bcx + "px," + bcy + "px) translate(-50%,-55%) scale(" + scale + ")";
+      requestAnimationFrame(tick);
+    })();
+    document.querySelectorAll("a, button, [data-magnetic]").forEach(function (el) {
+      el.addEventListener("mouseenter", function () { cursorB.classList.add("is-active"); });
+      el.addEventListener("mouseleave", function () { cursorB.classList.remove("is-active"); });
+    });
+  } else if (cursorB) {
+    cursorB.style.display = "none";
+  }
+
+  /* ---------- Magnetic buttons (subtle hover pull) ---------- */
   if (!isTouch && hasGSAP && !reduceMotion) {
     document.querySelectorAll("[data-magnetic]").forEach(function (el) {
       el.addEventListener("mouseleave", function () {
@@ -151,6 +171,26 @@
       });
     });
   });
+
+  /* ---------- Cookie banner ---------- */
+  (function () {
+    var banner = document.getElementById("cookie-banner");
+    if (!banner) return;
+    var STORAGE_KEY = "fmpb-cookie-consent";
+    var already = null;
+    try { already = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+    if (!already) {
+      setTimeout(function () { banner.classList.add("is-visible"); }, 1200);
+    }
+    function setConsent(value) {
+      try { localStorage.setItem(STORAGE_KEY, value); } catch (e) {}
+      banner.classList.remove("is-visible");
+    }
+    var btnNecessary = document.getElementById("cookie-necessary");
+    var btnAll = document.getElementById("cookie-all");
+    if (btnNecessary) btnNecessary.addEventListener("click", function () { setConsent("necessary"); });
+    if (btnAll) btnAll.addEventListener("click", function () { setConsent("all"); });
+  })();
 
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById("year");
