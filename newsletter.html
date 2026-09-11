@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Team – Frauen mit Plan B</title>
-<meta name="description" content="Julia und Stephanie – die Gründerinnen von Frauen mit Plan B.">
+<title>Newsletter – Frauen mit Plan B</title>
+<meta name="description" content="Trag dich in den Newsletter ein und komm in unsere WhatsApp-Community – dein Einstieg in Plan B.">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="demo-banner">🚧 DEMO – Test-Website zur Design-Vorschau. Inhalte, Texte &amp; Bilder sind teils Platzhalter.</div>
+<div class="demo-banner">🚧 DEMO – Formular ist noch nicht mit einem echten Postfach verbunden.</div>
 
 <div class="preloader" id="preloader"><span class="preloader__word">Frauen mit Plan B</span></div>
 
@@ -25,53 +25,50 @@
 
 <main>
   <section class="section" style="padding-top: clamp(3rem, 6vw, 5rem);">
-    <p class="eyebrow" data-reveal-text>Team</p>
-    <h1 data-reveal-text>Die Frauen hinter Frauen mit Plan B</h1>
-    <p style="max-width: 640px; font-size: 1.1rem;" data-reveal>
-      Wir sind keine anonyme Marke. Wir sind zwei Frauen, die genau den Weg gehen, den wir dir zeigen – und
-      die genau wissen, wie es sich anfühlt, zwischen Anstellung und dem Wunsch nach etwas Eigenem zu
-      stehen.
-    </p>
+    <p class="eyebrow" data-reveal-text>Newsletter</p>
+    <h1 data-reveal-text>Dein Plan B startet mit einer E-Mail</h1>
 
-    <div class="team__grid">
-      <article class="team-card" data-reveal>
-        <img class="team-card__media" src="assets/images/team-julia.jpg" alt="Julia, Gründerin von Frauen mit Plan B" loading="lazy">
-        <span class="demo-tag">DEMO-Bio – Platzhalter</span>
-        <h3>Julia</h3>
-        <span class="team-card__role">Gründerin, Frauen mit Plan B</span>
-        <p>
-          Julia bringt das Handwerkszeug für simplen, umsetzbaren Business-Aufbau mit – ohne Bullshit, ohne
-          Blueprints, die niemand aus dem echten Leben heraus umsetzen kann. TODO: echte Bio ergänzen.
+    <div class="newsletter-card" data-reveal>
+      <div class="newsletter-card__media">
+        <img src="assets/images/kontakt-gespraech.jpg" alt="Frauen mit Plan B im Gespräch" loading="lazy">
+      </div>
+      <div class="newsletter-card__form">
+        <p style="font-size: 1.05rem; margin-bottom: 1.75rem;">
+          Ehrliche Impulse zu Anstellung, Abhängigkeit und dem Aufbau deines eigenen, simplen Business –
+          Step für Step, ohne Bullshit, direkt in dein Postfach.
         </p>
-      </article>
-
-      <article class="team-card" data-reveal>
-        <img class="team-card__media" src="assets/images/team-stephanie.jpg" alt="Stephanie, Gründerin von Frauen mit Plan B" loading="lazy">
-        <span class="demo-tag">DEMO-Bio – Platzhalter</span>
-        <h3>Stephanie</h3>
-        <span class="team-card__role">Gründerin, Frauen mit Plan B</span>
-        <p>
-          Stephanie kennt die Seite der Abhängigkeit aus der Anstellung genau – und weiß, was es braucht,
-          um Schritt für Schritt den Absprung in etwas Eigenes zu schaffen. TODO: echte Bio ergänzen.
-        </p>
-      </article>
+        <form class="contact-form" id="newsletter-form">
+          <span class="demo-tag">DEMO – noch ohne echtes Postfach</span>
+          <div>
+            <label for="vorname">Vorname</label>
+            <input type="text" id="vorname" name="vorname" required>
+          </div>
+          <div>
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <button type="submit" class="btn" data-magnetic style="justify-self: start;">Jetzt eintragen</button>
+          <p class="contact-form__status" id="form-status"></p>
+        </form>
+      </div>
     </div>
-
-    <p style="margin-top: 2rem; font-size: 0.9rem; color: rgba(35,39,34,0.65);">
-      Fotos: aus eurem Shooting zugeschnitten auf Portraits, damit das „Madame MKTG"-Branding auf Tasse und
-      Notizbuch nicht im Bild auftaucht. Die 4 übrigen Fotos (Community-/Arbeits-Szenen) enthalten sichtbare
-      Logos/Beschriftungen mit dem alten Namen – sag Bescheid, wenn wir sie ebenfalls freistellen oder
-      retuschieren sollen, dann bauen wir sie an anderer Stelle mit ein.
-    </p>
   </section>
 
-  <section class="section cta">
-    <p class="eyebrow eyebrow--light" data-reveal-text>Neugierig geworden?</p>
-    <h2 class="cta__headline" data-reveal-text>Lern uns persönlich kennen.</h2>
-    <div class="cta-duo" data-reveal>
-      <a href="https://chat.whatsapp.com/IW5fSFVLf0m64qhpKW02oG?s=cl&amp;p=i&amp;mlu=0&amp;ilr=4" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer" data-magnetic>Deep Dive Community</a>
-      <a href="newsletter.html" class="btn btn--light" data-magnetic>Newsletter</a>
-    </div>
+  <!-- WHATSAPP MEMBERSHIP CARD -->
+  <section class="section cta whatsapp-cta">
+    <p class="eyebrow eyebrow--light" data-reveal-text>Lieber unverbindlich reinschnuppern?</p>
+    <h2 class="cta__headline" data-reveal-text>Komm in die <em>Deep Dive Community</em></h2>
+    <p class="cta__sub" data-reveal>Direkter Austausch, ehrliche Einblicke, kein Verkaufsdruck.</p>
+
+    <a class="membership-card" href="https://chat.whatsapp.com/IW5fSFVLf0m64qhpKW02oG?s=cl&amp;p=i&amp;mlu=0&amp;ilr=4" target="_blank" rel="noopener noreferrer" data-reveal aria-label="Zur WhatsApp Deep Dive Community">
+      <span class="membership-card__strap"></span>
+      <span class="membership-card__clip"></span>
+      <span class="membership-card__body">
+        <span class="membership-card__eyebrow">Mitgliedskarte</span>
+        <span class="membership-card__title">Deep Dive<br>Community</span>
+        <span class="membership-card__cta">Jetzt beitreten →</span>
+      </span>
+    </a>
   </section>
 </main>
 

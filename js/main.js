@@ -122,8 +122,8 @@
     });
   }
 
-  /* ---------- Contact form (demo — no backend wired up yet) ---------- */
-  var form = document.getElementById("contact-form");
+  /* ---------- Newsletter form (demo — no backend wired up yet) ---------- */
+  var form = document.getElementById("newsletter-form");
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
