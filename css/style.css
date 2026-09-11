@@ -273,9 +273,10 @@ p { margin: 0 0 1em; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(60% 60% at 22% 15%, rgba(93,110,96,0.4), transparent 60%),
-    radial-gradient(55% 55% at 82% 85%, rgba(218,184,128,0.22), transparent 62%),
-    linear-gradient(160deg, #232722 0%, #2c332c 55%, #1c201c 100%);
+    radial-gradient(70% 70% at 50% 0%, rgba(93,110,96,0.55), transparent 65%),
+    radial-gradient(65% 65% at 22% 20%, rgba(93,110,96,0.45), transparent 62%),
+    radial-gradient(60% 60% at 82% 85%, rgba(218,184,128,0.26), transparent 65%),
+    linear-gradient(160deg, #262b25 0%, #2c332c 55%, #1c201c 100%);
 }
 
 /* The two of them, flying in from the edges. Masked on the inner
@@ -289,11 +290,22 @@ p { margin: 0 0 1em; }
 }
 .hero__figure-wrap--left {
   left: 0;
-  animation: heroFlyLeft 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+  opacity: 0;
+  transform: translateX(-45%);
 }
 .hero__figure-wrap--right {
   right: 0;
-  animation: heroFlyRight 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+  opacity: 0;
+  transform: translateX(45%);
+}
+/* The fly-in only starts once body.is-loaded is set by main.js (right as
+   the preloader lifts) - otherwise the animation plays out hidden behind
+   the preloader and nobody ever sees the motion. */
+body.is-loaded .hero__figure-wrap--left {
+  animation: heroFlyLeft 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+body.is-loaded .hero__figure-wrap--right {
+  animation: heroFlyRight 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
 }
 .hero__figure {
   display: block;
@@ -335,6 +347,8 @@ p { margin: 0 0 1em; }
   white-space: nowrap;
   box-shadow: 0 10px 24px rgba(0,0,0,0.28);
   opacity: 0;
+}
+body.is-loaded .hero__bubble {
   animation: heroBubbleIn 0.45s ease forwards;
 }
 .hero__bubble::after {
@@ -346,15 +360,17 @@ p { margin: 0 0 1em; }
   border-top-color: var(--color-paper);
   border-bottom: 0;
 }
-.hero__bubble--left { animation-delay: 1.05s; }
-.hero__bubble--right { animation-delay: 1.25s; }
+body.is-loaded .hero__bubble--left { animation-delay: 1.6s; }
+body.is-loaded .hero__bubble--right { animation-delay: 1.8s; }
 @keyframes heroBubbleIn {
   from { opacity: 0; transform: translate(-50%, 8px) scale(0.9); }
   to { opacity: 1; transform: translate(-50%, 0) scale(1); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero__figure-wrap { animation: none; }
-  .hero__bubble { animation: none; opacity: 1; transform: translate(-50%, 0) scale(1); }
+  .hero__figure-wrap,
+  body.is-loaded .hero__figure-wrap { animation: none; opacity: 1; transform: translateX(0); }
+  .hero__bubble,
+  body.is-loaded .hero__bubble { animation: none; opacity: 1; transform: translate(-50%, 0) scale(1); }
 }
 @media (max-width: 900px) {
   .hero__figure-wrap { display: none; }

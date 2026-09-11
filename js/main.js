@@ -16,8 +16,10 @@
   var preloader = document.getElementById("preloader");
   var preloaderHidden = false;
   function hidePreloader() {
-    if (!preloader || preloaderHidden) return;
+    if (preloaderHidden) return;
     preloaderHidden = true;
+    document.body.classList.add("is-loaded");
+    if (!preloader) return;
     if (window.gsap) {
       gsap.to(preloader.querySelector(".preloader__word"), {
         opacity: 1, y: 0, duration: 0.6, ease: "power2.out"
