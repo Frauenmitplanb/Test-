@@ -292,9 +292,9 @@ p { margin: 0 0 1em; }
   z-index: 2;
   max-width: 900px;
   padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 3.5rem);
-  background: rgba(20, 24, 20, 0.04);
-  backdrop-filter: blur(0.5px);
-  -webkit-backdrop-filter: blur(0.5px);
+  background: rgba(20, 24, 20, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 .hero__headline .line { display: block; overflow: hidden; }
 .hero__headline em { color: var(--color-sand); font-style: italic; }
