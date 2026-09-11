@@ -210,8 +210,10 @@ p { margin: 0 0 1em; }
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(35, 39, 34, 0.08);
 }
-.logo { font-family: var(--font-headline); font-size: 1.35rem; }
+.logo { font-family: var(--font-headline); font-size: 1.35rem; display: inline-flex; align-items: center; }
 .logo em { color: var(--color-ink); }
+.logo-img { height: 34px; width: auto; display: block; }
+.site-footer .logo-img { height: 28px; }
 .nav { display: flex; gap: clamp(1rem, 2vw, 2rem); }
 .nav a { font-size: 0.9rem; font-weight: 600; }
 
