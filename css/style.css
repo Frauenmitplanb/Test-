@@ -4,16 +4,27 @@
    ========================================================== */
 
 @font-face {
-  font-family: "TAN Ashford";
-  src: url("../assets/fonts/TANAshford.woff2") format("woff2"),
-       url("../assets/fonts/TANAshford.otf") format("opentype");
+  font-family: "Old Standard TT";
+  src: url("../assets/fonts/OldStandardTT-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-/* Hinweis: Fontdatei noch nicht vorhanden -> fällt sauber auf den
-   Serif-Fallback zurück, bis die lizenzierte TAN-Ashford-Datei
-   unter assets/fonts/ abgelegt wird. */
+@font-face {
+  font-family: "Old Standard TT";
+  src: url("../assets/fonts/OldStandardTT-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Old Standard TT";
+  src: url("../assets/fonts/OldStandardTT-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+/* Self-hosted (SIL Open Font License) - no Google Fonts request, DSGVO-safe. */
 
 :root {
   --color-ink: #232722;
@@ -23,7 +34,7 @@
   --color-paper: #fbf9f5;
   --color-white: #ffffff;
 
-  --font-headline: "TAN Ashford", "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --font-headline: "Old Standard TT", Georgia, "Times New Roman", serif;
   --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   --container: 1180px;
@@ -273,10 +284,10 @@ p { margin: 0 0 1em; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(70% 70% at 50% 0%, rgba(93,110,96,0.55), transparent 65%),
-    radial-gradient(65% 65% at 22% 20%, rgba(93,110,96,0.45), transparent 62%),
-    radial-gradient(60% 60% at 82% 85%, rgba(218,184,128,0.26), transparent 65%),
-    linear-gradient(160deg, #262b25 0%, #2c332c 55%, #1c201c 100%);
+    radial-gradient(75% 75% at 50% 0%, rgba(255,255,255,0.12), transparent 60%),
+    radial-gradient(70% 70% at 18% 18%, rgba(218,184,128,0.28), transparent 62%),
+    radial-gradient(65% 65% at 85% 90%, rgba(218,184,128,0.32), transparent 65%),
+    linear-gradient(160deg, #6f7e67 0%, #5d6e60 50%, #4d5c47 100%);
 }
 
 /* Intro sequence: our photos cycle full-bleed over the hero, then the
@@ -285,9 +296,9 @@ p { margin: 0 0 1em; }
    ever starts once the preloader has actually lifted. */
 .hero__intro {
   position: absolute;
-  inset: 7% 8%;
+  inset: 0;
   z-index: 1;
-  overflow: visible;
+  overflow: hidden;
   pointer-events: none;
 }
 .hero__intro-img {
@@ -295,9 +306,10 @@ p { margin: 0 0 1em; }
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center 22%;
   opacity: 0;
-  transform: scale(0.97);
+  transform: scale(1.03);
   transition: opacity 0.5s ease, transform 0.6s ease;
 }
 .hero__intro-img.is-active {
@@ -307,7 +319,7 @@ p { margin: 0 0 1em; }
 }
 .hero__intro-img.is-collapsing {
   z-index: 3;
-  transform-origin: 4% 4%;
+  transform-origin: 8% 10%;
   transition: transform 0.75s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.5s ease 0.3s;
   transform: scale(0.08);
   opacity: 0;
@@ -315,8 +327,8 @@ p { margin: 0 0 1em; }
 .hero__intro::after {
   content: "";
   position: absolute;
-  inset: -7% -8%;
-  background: linear-gradient(180deg, rgba(20,24,19,0.18) 0%, rgba(20,24,19,0.32) 100%);
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20,24,19,0.08) 0%, rgba(20,24,19,0.22) 100%);
 }
 
 .hero__content {
