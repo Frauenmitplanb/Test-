@@ -330,14 +330,9 @@ p { margin: 0 0 1em; }
   inset: 0;
   background: linear-gradient(180deg, rgba(20,24,19,0.08) 0%, rgba(20,24,19,0.22) 100%);
 }
-/* On narrow phone screens the photos are far taller (portrait viewport)
-   than the wide crops made for desktop, so object-fit: cover would slice
-   off one side of every photo. Show the whole photo instead, letterboxed
-   against the hero gradient, rather than cropping anyone out. */
-@media (max-width: 640px) {
-  .hero__intro { inset: 6% 6%; }
-  .hero__intro-img { object-fit: contain; object-position: center center; }
-}
+/* Below 640px the <picture> sources swap in dedicated portrait crops
+   (hero-intro-*-mobile.jpg) made for phone aspect ratios, so cover-fill
+   still works full-bleed without slicing anyone off the side. */
 
 .hero__content {
   position: relative;
