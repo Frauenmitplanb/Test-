@@ -19,6 +19,7 @@
     if (preloaderHidden) return;
     preloaderHidden = true;
     document.body.classList.add("is-loaded");
+    document.dispatchEvent(new Event("fmpb:loaded"));
     if (!preloader) return;
     if (window.gsap) {
       gsap.to(preloader.querySelector(".preloader__word"), {
@@ -36,6 +37,51 @@
     setTimeout(hidePreloader, reduceMotion ? 0 : 300);
   });
   setTimeout(hidePreloader, 2000);
+
+  /* ---------- Hero image intro ----------
+     Our photos cycle full-bleed over the hero, then the last one
+     shrinks away into the top-left corner before the headline shows.
+     Only ever starts once the preloader has actually lifted (via the
+     fmpb:loaded event), so it always plays out where visitors can see
+     it instead of finishing underneath the overlay. */
+  var heroSection = document.querySelector(".hero");
+  var heroIntroWrap = document.querySelector(".hero__intro");
+  var heroIntroImgs = heroIntroWrap ? heroIntroWrap.querySelectorAll(".hero__intro-img") : [];
+  var heroContent = document.querySelector(".hero__content");
+  if (heroSection && heroIntroWrap && heroIntroImgs.length && heroContent) {
+    if (reduceMotion) {
+      heroIntroWrap.remove();
+    } else {
+      heroSection.classList.add("js-intro");
+      var startHeroIntro = function () {
+        var stepMs = 500;
+        var lastIndex = heroIntroImgs.length - 1;
+        heroIntroImgs[0].classList.add("is-active");
+        for (var i = 1; i <= lastIndex; i++) {
+          (function (i) {
+            setTimeout(function () {
+              heroIntroImgs[i - 1].classList.remove("is-active");
+              heroIntroImgs[i].classList.add("is-active");
+            }, stepMs * i);
+          })(i);
+        }
+        /* the last image gets a beat on screen, then collapses into the
+           corner while the headline fades in behind it */
+        setTimeout(function () {
+          heroIntroImgs[lastIndex].classList.add("is-collapsing");
+          heroContent.classList.add("is-revealed");
+        }, stepMs * (lastIndex + 1));
+        setTimeout(function () {
+          heroIntroWrap.remove();
+        }, stepMs * (lastIndex + 1) + 900);
+      };
+      if (document.body.classList.contains("is-loaded")) {
+        startHeroIntro();
+      } else {
+        document.addEventListener("fmpb:loaded", startHeroIntro, { once: true });
+      }
+    }
+  }
 
   /* ---------- GSAP setup ---------- */
   var hasGSAP = !!window.gsap;
