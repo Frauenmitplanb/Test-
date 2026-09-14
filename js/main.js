@@ -54,7 +54,7 @@
     } else {
       heroSection.classList.add("js-intro");
       var startHeroIntro = function () {
-        var stepMs = 500;
+        var stepMs = 850;
         var lastIndex = heroIntroImgs.length - 1;
         heroIntroImgs[0].classList.add("is-active");
         for (var i = 1; i <= lastIndex; i++) {
