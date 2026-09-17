@@ -370,6 +370,17 @@ p { margin: 0 0 1em; }
 }
 .hero__actions { display: flex; align-items: center; justify-content: center; gap: 1.75rem; flex-wrap: wrap; }
 .hero .link-underline { color: var(--color-paper); }
+.hero__trust {
+  max-width: 620px;
+  margin: 2rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(251, 249, 245, 0.22);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(251, 249, 245, 0.75);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.hero__trust strong { color: var(--color-sand); font-weight: 600; }
 
 .scroll-hint {
   position: absolute;
@@ -454,6 +465,20 @@ p { margin: 0 0 1em; }
 .manifesto__statement em { color: var(--color-sand); }
 .manifesto__text { font-size: 1.1rem; color: rgba(251, 249, 245, 0.82); }
 .manifesto__text em { color: var(--color-sand); font-style: normal; font-weight: 600; }
+.manifesto__text--strong { font-weight: 600; color: var(--color-paper); font-size: 1.2rem; margin-top: 1.5rem; }
+.manifesto__list {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+  text-align: left;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.05rem;
+  color: rgba(251, 249, 245, 0.82);
+}
 
 /* ---------- Compare (Plan A / Plan B) ---------- */
 .compare { text-align: center; }
@@ -506,7 +531,7 @@ p { margin: 0 0 1em; }
   .compare__card::before { animation: none; }
   .compare__card:hover::before { opacity: 1; }
 }
-.compare__label { font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-forest); font-weight: 700; }
+.compare__label { display: block; margin-bottom: 0.85rem; font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-forest); font-weight: 700; }
 .compare__arrow { font-size: 1.8rem; color: var(--color-sand); }
 .compare__footnote { margin-top: 2.5rem; font-family: var(--font-headline); font-style: italic; font-size: 1.4rem; }
 
@@ -517,6 +542,43 @@ p { margin: 0 0 1em; }
 .check-list li { position: relative; padding-left: 1.6rem; }
 .check-list--yes li::before { content: "✓"; position: absolute; left: 0; color: var(--color-forest); font-weight: 700; }
 .check-list--no li::before { content: "–"; position: absolute; left: 0; color: var(--color-sand); font-weight: 700; }
+
+/* ---------- Realitäts-Check ---------- */
+.realitycheck {
+  max-width: none;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  text-align: center;
+}
+.realitycheck__inner { max-width: 720px; margin: 0 auto; }
+.realitycheck__statement {
+  font-family: var(--font-headline);
+  font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+  font-weight: 400;
+  line-height: 1.35;
+  margin-bottom: 2rem;
+}
+.realitycheck__lead {
+  font-size: 1.15rem;
+  color: var(--color-sand);
+  margin-bottom: 2rem;
+}
+.realitycheck__text {
+  text-align: left;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: rgba(251, 249, 245, 0.82);
+}
+.realitycheck__text p { margin-bottom: 1.1rem; }
+.realitycheck__text strong { color: var(--color-paper); font-weight: 600; }
+.realitycheck__text em { color: var(--color-sand); font-style: italic; }
+.realitycheck__claim {
+  margin-top: 2.5rem;
+  font-family: var(--font-headline);
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.5;
+}
 
 /* ---------- Pillars ---------- */
 .pillars { text-align: center; }
