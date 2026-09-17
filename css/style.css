@@ -605,25 +605,24 @@ p { margin: 0 0 1em; }
   line-height: 1.5;
 }
 
-/* ---------- Über uns: Intro (Founder's Story, full-bleed band) ---------- */
+/* ---------- Über uns: Intro hero (eyebrow + Founder's Story + headline) ---------- */
+.intro-hero {
+  max-width: none;
+  padding: clamp(2.5rem, 5vw, 4rem) 1.5rem clamp(3rem, 6vw, 5rem);
+  background:
+    radial-gradient(60% 65% at 16% 10%, rgba(218,184,128,0.22), transparent 62%),
+    radial-gradient(55% 60% at 88% 55%, rgba(93,110,96,0.16), transparent 62%),
+    var(--color-cream);
+}
+.intro-hero__inner {
+  max-width: var(--container);
+  margin: 0 auto;
+}
 .founders-story {
   position: relative;
-  width: 100vw;
-  max-width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  margin-top: 0;
-  margin-bottom: clamp(2.5rem, 6vw, 4rem);
-  padding: clamp(2.5rem, 6vw, 4rem) 1.5rem;
-  background:
-    radial-gradient(65% 100% at 18% 20%, rgba(218,184,128,0.22), transparent 65%),
-    radial-gradient(60% 100% at 85% 85%, rgba(93,110,96,0.16), transparent 65%),
-    var(--color-cream);
-  overflow: hidden;
+  margin: 1.5rem 0 1.25rem;
 }
 .founders-story__img {
-  position: relative;
-  z-index: 1;
   width: 100%;
   max-width: 560px;
   height: auto;
