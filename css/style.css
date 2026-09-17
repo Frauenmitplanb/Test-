@@ -605,6 +605,40 @@ p { margin: 0 0 1em; }
   line-height: 1.5;
 }
 
+/* ---------- Über uns: Weg-Story ---------- */
+.weg-story__inner {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+.weg-story__inner h2 { margin-top: 0; }
+.weg-story__inner h3 { margin-top: 2.25rem; }
+.weg-story__brand {
+  font-family: var(--font-headline);
+  font-size: clamp(1.8rem, 4.5vw, 2.75rem);
+  text-align: center;
+  margin: 2.25rem 0;
+  color: var(--color-forest);
+}
+.weg-story__lead {
+  font-family: var(--font-headline);
+  font-size: 1.35rem;
+  text-align: center;
+  line-height: 1.5;
+  margin-top: 2.25rem;
+}
+.weg-story__media {
+  max-width: 520px;
+  margin: 3.5rem auto 0;
+}
+.weg-story__img {
+  width: 100%;
+  display: block;
+  -webkit-mask-image: radial-gradient(ellipse 85% 85% at center, #000 70%, transparent 100%);
+  mask-image: radial-gradient(ellipse 85% 85% at center, #000 70%, transparent 100%);
+}
+
 /* ---------- Pillars ---------- */
 .pillars { text-align: center; }
 .pillars h2 { max-width: 700px; margin-left: auto; margin-right: auto; }
