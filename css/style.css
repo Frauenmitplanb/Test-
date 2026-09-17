@@ -605,20 +605,27 @@ p { margin: 0 0 1em; }
   line-height: 1.5;
 }
 
-/* ---------- Über uns: Founder's Story ---------- */
+/* ---------- Über uns: Intro (Text + Founder's Story) ---------- */
+.about-intro__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+@media (max-width: 900px) { .about-intro__grid { grid-template-columns: 1fr; } }
 .founders-story {
   position: relative;
-  max-width: 380px;
-  margin: 1rem auto 2.5rem;
+  max-width: 360px;
+  margin: 0 auto;
 }
 .founders-story::before {
   content: "";
   position: absolute;
-  inset: -10% -20%;
+  inset: -12%;
   background:
-    radial-gradient(55% 55% at 35% 30%, rgba(218,184,128,0.24), transparent 70%),
-    radial-gradient(50% 50% at 70% 65%, rgba(93,110,96,0.18), transparent 72%);
-  filter: blur(6px);
+    radial-gradient(60% 60% at 32% 28%, rgba(218,184,128,0.28), transparent 72%),
+    radial-gradient(55% 55% at 72% 68%, rgba(93,110,96,0.22), transparent 74%);
+  filter: blur(8px);
   z-index: 0;
 }
 .founders-story__img {
