@@ -821,7 +821,7 @@ p { margin: 0 0 1em; }
 .site-footer__social a:hover { background: var(--color-forest); color: var(--color-paper); transform: translateY(-2px); }
 .site-footer__social svg { width: 16px; height: 16px; fill: currentColor; }
 
-/* ---------- Team: Hero (eyebrow + headline + two portraits) ---------- */
+/* ---------- Team: Hero (eyebrow + headline) ---------- */
 .team-hero {
   max-width: none;
   padding: clamp(2.5rem, 5vw, 4rem) 1.5rem clamp(3rem, 6vw, 5rem);
@@ -836,24 +836,6 @@ p { margin: 0 0 1em; }
   text-align: center;
 }
 .team-hero h1 { max-width: 780px; margin: 0 auto; }
-.team-hero__media {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: clamp(2.5rem, 5vw, 4rem);
-  max-width: var(--container);
-  margin: 2rem auto 0;
-}
-@media (max-width: 720px) { .team-hero__media { grid-template-columns: 1fr; } }
-.team-hero__img {
-  width: 100%;
-  max-width: 420px;
-  margin: 0 auto;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center 20%;
-  display: block;
-  border-radius: 6px;
-}
 
 /* ---------- Team: Bios ---------- */
 .team__grid {
@@ -864,6 +846,27 @@ p { margin: 0 0 1em; }
   line-height: 1.7;
 }
 @media (max-width: 720px) { .team__grid { grid-template-columns: 1fr; } }
+.team-card__portrait {
+  max-width: 420px;
+  margin: 0 auto 1.75rem;
+  border-radius: 10px 10px 28px 28px;
+  overflow: hidden;
+  background: var(--color-cream);
+}
+.team-card__portrait img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+.team-card__portrait figcaption {
+  font-family: var(--font-headline);
+  font-size: 1.2rem;
+  color: var(--color-ink);
+  text-align: center;
+  padding: 0.7rem 0;
+}
 .team-card h3 { margin-bottom: 0.25rem; }
 .team-card__role {
   display: block;
