@@ -821,25 +821,79 @@ p { margin: 0 0 1em; }
 .site-footer__social a:hover { background: var(--color-forest); color: var(--color-paper); transform: translateY(-2px); }
 .site-footer__social svg { width: 16px; height: 16px; fill: currentColor; }
 
-/* ---------- Team ---------- */
+/* ---------- Team: Hero (eyebrow + headline + duo photo) ---------- */
+.team-hero {
+  max-width: none;
+  padding: clamp(2.5rem, 5vw, 4rem) 1.5rem clamp(3rem, 6vw, 5rem);
+  background:
+    radial-gradient(60% 65% at 16% 10%, rgba(218,184,128,0.22), transparent 62%),
+    radial-gradient(55% 60% at 88% 55%, rgba(93,110,96,0.16), transparent 62%),
+    var(--color-cream);
+}
+.team-hero__inner {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+.team-hero h1 { max-width: 780px; }
+.team-hero__media {
+  position: relative;
+  margin: 2rem 0 0;
+}
+.team-hero__img {
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+/* ---------- Team: Bios ---------- */
 .team__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(2rem, 5vw, 4rem);
-  margin-top: 2.5rem;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  font-size: 1.02rem;
+  line-height: 1.7;
 }
 @media (max-width: 720px) { .team__grid { grid-template-columns: 1fr; } }
-.team-card__media {
-  aspect-ratio: 4 / 5;
-  margin-bottom: 1.25rem;
-  width: 100%;
-  object-fit: cover;
-  object-position: center 20%;
-  border-radius: 4px;
-  background: var(--color-cream);
-}
 .team-card h3 { margin-bottom: 0.25rem; }
-.team-card__role { display: block; font-size: 0.85rem; color: var(--color-forest); font-weight: 700; margin-bottom: 0.9rem; }
+.team-card__role {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-forest);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+.team-card__headline {
+  font-family: var(--font-headline);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--color-forest);
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Team: shared "Zwei unterschiedliche Köpfe" ---------- */
+.team-together {
+  max-width: none;
+  padding: clamp(3rem, 6vw, 5rem) 1.5rem;
+  background:
+    radial-gradient(50% 60% at 90% 12%, rgba(218,184,128,0.20), transparent 65%),
+    radial-gradient(55% 60% at 10% 90%, rgba(93,110,96,0.16), transparent 65%),
+    var(--color-cream);
+}
+.team-together__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+.team-together__closing {
+  font-family: var(--font-headline);
+  font-size: 1.35rem;
+  margin-top: 1.75rem;
+}
 
 /* ---------- Offer cards (Produkte) ---------- */
 .offers__grid {
