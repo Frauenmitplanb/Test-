@@ -605,6 +605,30 @@ p { margin: 0 0 1em; }
   line-height: 1.5;
 }
 
+/* ---------- Über uns: Founder's Story ---------- */
+.founders-story {
+  position: relative;
+  max-width: 380px;
+  margin: 1rem auto 2.5rem;
+}
+.founders-story::before {
+  content: "";
+  position: absolute;
+  inset: -10% -20%;
+  background:
+    radial-gradient(55% 55% at 35% 30%, rgba(218,184,128,0.24), transparent 70%),
+    radial-gradient(50% 50% at 70% 65%, rgba(93,110,96,0.18), transparent 72%);
+  filter: blur(6px);
+  z-index: 0;
+}
+.founders-story__img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ---------- Über uns: Weg-Story ---------- */
 .weg-story__inner {
   max-width: 680px;
