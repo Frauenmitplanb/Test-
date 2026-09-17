@@ -116,8 +116,34 @@
   }
 
   /* ---------- Scroll reveals ---------- */
-  var revealEls = document.querySelectorAll("[data-reveal]");
-  var revealTextEls = document.querySelectorAll("[data-reveal-text]");
+  var revealEls = document.querySelectorAll("[data-reveal]:not([data-reveal-onload])");
+  var revealTextEls = document.querySelectorAll("[data-reveal-text]:not([data-reveal-onload])");
+
+  /* Elements marked data-reveal-onload sit below the fold in the layout
+     (e.g. behind a tall hero image) but should still animate in with the
+     page load instead of waiting for the visitor to scroll to them. */
+  var loadRevealEls = document.querySelectorAll("[data-reveal][data-reveal-onload]");
+  var loadRevealTextEls = document.querySelectorAll("[data-reveal-text][data-reveal-onload]");
+  if ((loadRevealEls.length || loadRevealTextEls.length)) {
+    if (hasGSAP && !reduceMotion) {
+      var playLoadReveals = function () {
+        loadRevealEls.forEach(function (el) {
+          gsap.fromTo(el, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" });
+        });
+        loadRevealTextEls.forEach(function (el) {
+          gsap.fromTo(el, { opacity: 0, y: "100%" }, { opacity: 1, y: "0%", duration: 1, ease: "power3.out" });
+        });
+      };
+      if (document.body.classList.contains("is-loaded")) {
+        playLoadReveals();
+      } else {
+        document.addEventListener("fmpb:loaded", playLoadReveals, { once: true });
+      }
+    } else {
+      loadRevealEls.forEach(function (el) { el.style.opacity = 1; });
+      loadRevealTextEls.forEach(function (el) { el.style.opacity = 1; });
+    }
+  }
 
   if (hasGSAP && window.ScrollTrigger && !reduceMotion) {
     revealEls.forEach(function (el) {

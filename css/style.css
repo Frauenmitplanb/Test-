@@ -821,7 +821,7 @@ p { margin: 0 0 1em; }
 .site-footer__social a:hover { background: var(--color-forest); color: var(--color-paper); transform: translateY(-2px); }
 .site-footer__social svg { width: 16px; height: 16px; fill: currentColor; }
 
-/* ---------- Team: Hero (eyebrow + headline + duo photo) ---------- */
+/* ---------- Team: Hero (eyebrow + headline + two portraits) ---------- */
 .team-hero {
   max-width: none;
   padding: clamp(2.5rem, 5vw, 4rem) 1.5rem clamp(3rem, 6vw, 5rem);
@@ -836,13 +836,18 @@ p { margin: 0 0 1em; }
 }
 .team-hero h1 { max-width: 780px; }
 .team-hero__media {
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  max-width: 760px;
   margin: 2rem 0 0;
 }
+@media (max-width: 560px) { .team-hero__media { grid-template-columns: 1fr; } }
 .team-hero__img {
   width: 100%;
-  max-width: 760px;
-  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 20%;
   display: block;
   border-radius: 6px;
 }
