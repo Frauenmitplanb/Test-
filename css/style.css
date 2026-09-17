@@ -833,18 +833,21 @@ p { margin: 0 0 1em; }
 .team-hero__inner {
   max-width: var(--container);
   margin: 0 auto;
+  text-align: center;
 }
-.team-hero h1 { max-width: 780px; }
+.team-hero h1 { max-width: 780px; margin: 0 auto; }
 .team-hero__media {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(1rem, 2.5vw, 1.75rem);
-  max-width: 760px;
-  margin: 2rem 0 0;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  max-width: var(--container);
+  margin: 2rem auto 0;
 }
-@media (max-width: 560px) { .team-hero__media { grid-template-columns: 1fr; } }
+@media (max-width: 720px) { .team-hero__media { grid-template-columns: 1fr; } }
 .team-hero__img {
   width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center 20%;
