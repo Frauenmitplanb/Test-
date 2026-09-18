@@ -37,9 +37,18 @@
   <section class="hero">
     <div class="hero__bg"></div>
     <div class="hero__intro" aria-hidden="true">
-      <img class="hero__intro-img" src="assets/images/hero-intro-1.jpg" alt="" loading="eager">
-      <img class="hero__intro-img" src="assets/images/hero-intro-2.jpg" alt="" loading="eager">
-      <img class="hero__intro-img" src="assets/images/hero-intro-3.jpg" alt="" loading="eager">
+      <picture>
+        <source media="(max-width: 640px)" srcset="assets/images/hero-intro-1-mobile.jpg">
+        <img class="hero__intro-img" src="assets/images/hero-intro-1.jpg" alt="" loading="eager">
+      </picture>
+      <picture>
+        <source media="(max-width: 640px)" srcset="assets/images/hero-intro-2-mobile.jpg">
+        <img class="hero__intro-img" src="assets/images/hero-intro-2.jpg" alt="" loading="eager">
+      </picture>
+      <picture>
+        <source media="(max-width: 640px)" srcset="assets/images/hero-intro-3-mobile.jpg">
+        <img class="hero__intro-img" src="assets/images/hero-intro-3.jpg" alt="" loading="eager">
+      </picture>
     </div>
     <div class="hero__content">
       <p class="eyebrow" data-reveal-text>Von Abhängigkeit zu Wahlfreiheit. <span class="hero__eyebrow-break">Für Frauen, die mehr wollen als PLAN A(nstellung).</span></p>

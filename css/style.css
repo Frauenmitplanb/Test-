@@ -304,6 +304,16 @@ p { margin: 0 0 1em; }
   overflow: hidden;
   pointer-events: none;
 }
+@media (max-width: 640px) {
+  /* .hero itself grows taller than one screen once its text content is
+     accounted for (min-height: 100vh only sets a floor), so inset: 0
+     here was stretching the intro photos to cover that whole tall
+     section instead of one screenful - forcing an absurdly narrow
+     effective crop that sliced through both women. Cap it to the
+     viewport itself so the dedicated mobile crops render at something
+     close to their intended aspect ratio. */
+  .hero__intro { top: 0; left: 0; right: 0; bottom: auto; height: 100vh; }
+}
 .hero__intro-img {
   position: absolute;
   inset: 0;
@@ -315,12 +325,9 @@ p { margin: 0 0 1em; }
   transform: scale(1.03);
   transition: opacity 0.5s ease, transform 0.6s ease;
 }
-@media (max-width: 640px) {
-  /* A landscape photo forced to cover a full-height phone screen has to
-     crop out one of the two women. Showing the whole photo (letterboxed
-     against the hero gradient) keeps both of them fully visible. */
-  .hero__intro-img { object-fit: contain; object-position: center center; }
-}
+/* Below 640px the <picture> sources swap in dedicated portrait crops
+   (hero-intro-*-mobile.jpg) made for phone aspect ratios, so cover-fill
+   still works full-bleed without slicing anyone off the side. */
 .hero__intro-img.is-active {
   opacity: 1;
   transform: scale(1);
@@ -671,7 +678,7 @@ p { margin: 0 0 1em; }
 }
 .founders-story {
   position: relative;
-  margin: 1.5rem 0 2.25rem;
+  margin: 1.5rem 0 1.25rem;
 }
 .founders-story__img {
   width: 100%;
@@ -680,17 +687,6 @@ p { margin: 0 0 1em; }
   display: block;
   margin: 0 auto;
   border-radius: 8px;
-}
-.founders-story__arrow {
-  position: absolute;
-  left: 14%;
-  bottom: -3.5rem;
-  width: 120px;
-  height: auto;
-  color: var(--color-ink);
-}
-@media (max-width: 640px) {
-  .founders-story__arrow { width: 84px; bottom: -2.5rem; left: 10%; }
 }
 
 /* ---------- Über uns: Weg-Story ---------- */
