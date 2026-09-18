@@ -278,6 +278,36 @@
     if (btnAll) btnAll.addEventListener("click", function () { setConsent("all"); });
   })();
 
+  /* ---------- Promo modal (WhatsApp reminder, ~45s after load) ---------- */
+  (function () {
+    var modal = document.getElementById("promo-modal");
+    if (!modal) return;
+    var STORAGE_KEY = "fmpb-promo-modal-seen";
+    var already = null;
+    try { already = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+    function closeModal() {
+      modal.classList.remove("is-visible");
+      try { sessionStorage.setItem(STORAGE_KEY, "1"); } catch (e) {}
+    }
+    if (!already) {
+      setTimeout(function () {
+        try { already = sessionStorage.getItem(STORAGE_KEY); } catch (e) {}
+        if (!already) modal.classList.add("is-visible");
+      }, 45000);
+    }
+    var closeBtn = document.getElementById("promo-modal-close");
+    if (closeBtn) closeBtn.addEventListener("click", closeModal);
+    modal.querySelectorAll("[data-promo-dismiss]").forEach(function (el) {
+      el.addEventListener("click", closeModal);
+    });
+    modal.querySelectorAll("a").forEach(function (el) {
+      el.addEventListener("click", closeModal);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeModal();
+    });
+  })();
+
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();

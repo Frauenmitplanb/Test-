@@ -531,36 +531,40 @@ p { margin: 0 0 1em; }
 }
 
 /* ---------- Social Proof ---------- */
+.social-proof {
+  padding-top: clamp(1.75rem, 3.5vw, 2.75rem);
+  padding-bottom: clamp(1.75rem, 3.5vw, 2.75rem);
+}
 .social-proof__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
+  gap: 1.1rem;
 }
 @media (max-width: 900px) { .social-proof__grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { .social-proof__grid { grid-template-columns: 1fr; } }
 .social-proof__card {
-  padding: 1.75rem 1.5rem;
-  border: 1px solid rgba(93,110,96,0.25);
+  position: relative;
+  padding: 1.1rem 1.25rem 1.1rem 1.5rem;
   border-radius: 10px;
-  background: var(--color-white);
+  background: linear-gradient(160deg, rgba(218,184,128,0.16), rgba(93,110,96,0.08));
+  overflow: hidden;
 }
-.social-proof__label {
-  display: block;
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-forest);
-  font-weight: 700;
-  margin-bottom: 0.6rem;
+.social-proof__card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--color-sand), var(--color-forest));
 }
 .social-proof__value {
   display: block;
   font-family: var(--font-headline);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   color: var(--color-ink);
-  margin-bottom: 0.6rem;
-  line-height: 1.25;
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
 }
+.social-proof__value em { color: var(--color-forest); font-style: normal; }
 .social-proof__desc {
   font-size: 0.88rem;
   color: rgba(35,39,34,0.7);
@@ -1220,6 +1224,99 @@ p { margin: 0 0 1em; }
 .cookie-btn--all { background: var(--color-forest); color: var(--color-paper); }
 .cookie-btn--all:hover { background: #4a584c; }
 @media (max-width: 480px) { .cookie-banner { left: 0.75rem; right: 0.75rem; bottom: 0.75rem; padding: 1.25rem; } }
+
+/* ---------- Promo modal (WhatsApp reminder) ---------- */
+.promo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0s linear 0.4s;
+}
+.promo-modal.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease;
+}
+.promo-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20,24,19,0.55);
+}
+.promo-modal__card {
+  position: relative;
+  max-width: 360px;
+  width: 100%;
+  background: var(--color-white);
+  border-radius: 20px;
+  padding: 2.25rem 1.75rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.3);
+  transform: scale(0.92) translateY(10px);
+  transition: transform 0.4s var(--ease);
+}
+.promo-modal.is-visible .promo-modal__card { transform: scale(1) translateY(0); }
+.promo-modal__close {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(35,39,34,0.06);
+  color: var(--color-ink);
+  font-size: 0.8rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+.promo-modal__close:hover { background: rgba(35,39,34,0.12); }
+.promo-modal__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #25D366;
+  margin-bottom: 1.1rem;
+}
+.promo-modal__icon svg { width: 26px; height: 26px; fill: #fff; }
+.promo-modal__title {
+  font-family: var(--font-headline);
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin-bottom: 0.9rem;
+  color: var(--color-ink);
+}
+.promo-modal__text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(35,39,34,0.75);
+  margin: 0 0 0.85rem;
+}
+.promo-modal__btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.35rem;
+}
+.promo-modal__footnote {
+  margin: 1rem 0 0;
+  font-size: 0.72rem;
+  color: rgba(35,39,34,0.5);
+}
+@media (max-width: 480px) {
+  .promo-modal__card { padding: 2rem 1.4rem 1.5rem; }
+}
 
 /* ---------- Reveal base states (JS toggles .is-visible) ---------- */
 [data-reveal], [data-reveal-text] { opacity: 0; }
