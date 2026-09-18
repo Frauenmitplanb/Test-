@@ -166,6 +166,18 @@
       );
     });
 
+    /* Staggered list reveals: each direct child flies in one after
+       another instead of the whole block fading in at once. */
+    document.querySelectorAll("[data-reveal-stagger]").forEach(function (el) {
+      gsap.fromTo(el.children,
+        { opacity: 0, x: -16 },
+        {
+          opacity: 1, x: 0, duration: 0.6, ease: "power2.out", stagger: 0.18,
+          scrollTrigger: { trigger: el, start: "top 85%" }
+        }
+      );
+    });
+
     /* Parallax layers */
     document.querySelectorAll("[data-parallax]").forEach(function (el) {
       var strength = parseFloat(el.getAttribute("data-parallax")) || 0.1;

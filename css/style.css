@@ -96,6 +96,7 @@ h1 {
 h2 { font-size: clamp(2rem, 4.2vw, 3.4rem); letter-spacing: 0.015em; }
 h3 { font-size: clamp(1.3rem, 2vw, 1.6rem); font-family: var(--font-body); font-weight: 600; }
 em { font-style: italic; color: var(--color-forest); }
+.nowrap { white-space: nowrap; }
 .text-accent { color: var(--color-forest); background: linear-gradient(transparent 68%, rgba(218,184,128,0.35) 68%); padding: 0 0.15em; }
 p { margin: 0 0 1em; }
 
@@ -170,6 +171,7 @@ p { margin: 0 0 1em; }
   transition: background-size 0.5s var(--ease);
 }
 .link-underline:hover { background-size: 100% 1px; }
+.link-underline--sand { color: var(--color-sand); }
 
 /* ---------- Preloader ---------- */
 .preloader {
@@ -373,6 +375,9 @@ p { margin: 0 0 1em; }
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.75rem;
+}
+@media (max-width: 640px) {
+  .hero__eyebrow-break { display: block; }
 }
 .hero__sub {
   max-width: 560px;
@@ -652,6 +657,12 @@ p { margin: 0 0 1em; }
   max-width: var(--container);
   margin: 0 auto;
 }
+.intro-hero h1 {
+  text-align: center;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .founders-story {
   position: relative;
   margin: 1.5rem 0 1.25rem;
@@ -703,7 +714,12 @@ p { margin: 0 0 1em; }
   font-size: 1.35rem;
   text-align: center;
   line-height: 1.5;
-  margin-top: 2.25rem;
+  color: var(--color-ink);
+  background: rgba(218,184,128,0.35);
+  border-radius: 8px;
+  padding: 1.25rem 1.75rem;
+  margin: 2.25rem auto 0;
+  max-width: fit-content;
 }
 .weg-story__media {
   position: sticky;
