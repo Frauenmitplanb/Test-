@@ -228,17 +228,57 @@
     });
   }
 
-  /* ---------- Newsletter form (demo — no backend wired up yet) ---------- */
-  var form = document.getElementById("newsletter-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var status = document.getElementById("form-status");
-      if (status) {
-        status.textContent = "Demo-Formular: Es ist noch kein echtes Postfach angebunden. Bitte nutze aktuell die WhatsApp-Community.";
+  /* ---------- Newsletter form: Alfima embed (loads only after consent) ---------- */
+  (function () {
+    var wrap = document.getElementById("alfima-embed");
+    if (!wrap) return;
+    var CONSENT_KEY = "fmpb-cookie-consent";
+    var src = wrap.getAttribute("data-embed-src");
+    var loaded = false;
+
+    function injectEmbed() {
+      if (loaded) return;
+      loaded = true;
+      var iframe = document.createElement("iframe");
+      iframe.src = src;
+      iframe.style.width = "100%";
+      iframe.style.border = "none";
+      iframe.style.minHeight = "400px";
+      iframe.title = "Lead Form";
+      wrap.innerHTML = "";
+      wrap.appendChild(iframe);
+
+      var allowedOrigin = new URL(src).origin;
+      window.addEventListener("message", function (e) {
+        if (e.origin !== allowedOrigin) return;
+        if (!e.data || typeof e.data.type !== "string") return;
+        if (e.data.type === "alfima-embed-resize") {
+          iframe.style.height = e.data.height + "px";
+        } else if (e.data.type === "alfima-embed-redirect") {
+          var url = e.data.url;
+          if (typeof url === "string" && /^https?:\/\//.test(url)) {
+            window.top.location.href = url;
+          }
+        }
+      });
+    }
+
+    var consent = null;
+    try { consent = localStorage.getItem(CONSENT_KEY); } catch (e) {}
+    if (consent === "all") {
+      injectEmbed();
+    } else {
+      var loadBtn = document.getElementById("alfima-embed-load");
+      if (loadBtn) {
+        loadBtn.addEventListener("click", function () {
+          try { localStorage.setItem(CONSENT_KEY, "all"); } catch (e) {}
+          var banner = document.getElementById("cookie-banner");
+          if (banner) banner.classList.remove("is-visible");
+          injectEmbed();
+        });
       }
-    });
-  }
+    }
+  })();
 
   /* ---------- Mobile nav toggle ---------- */
   document.querySelectorAll(".nav-toggle").forEach(function (btn) {
