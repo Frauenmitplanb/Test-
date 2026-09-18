@@ -530,6 +530,44 @@ p { margin: 0 0 1em; }
   font-weight: 700;
 }
 
+/* ---------- Social Proof ---------- */
+.social-proof__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 900px) { .social-proof__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .social-proof__grid { grid-template-columns: 1fr; } }
+.social-proof__card {
+  padding: 1.75rem 1.5rem;
+  border: 1px solid rgba(93,110,96,0.25);
+  border-radius: 10px;
+  background: var(--color-white);
+}
+.social-proof__label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-forest);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+.social-proof__value {
+  display: block;
+  font-family: var(--font-headline);
+  font-size: 1.5rem;
+  color: var(--color-ink);
+  margin-bottom: 0.6rem;
+  line-height: 1.25;
+}
+.social-proof__desc {
+  font-size: 0.88rem;
+  color: rgba(35,39,34,0.7);
+  line-height: 1.55;
+}
+.social-proof__desc em { color: var(--color-forest); font-style: normal; }
+
 /* ---------- Compare (Plan A / Plan B) ---------- */
 .compare { text-align: center; }
 .compare h2 { max-width: 640px; margin-left: auto; margin-right: auto; }
@@ -1086,6 +1124,16 @@ p { margin: 0 0 1em; }
   font-size: 1.5rem;
   line-height: 1.15;
   color: var(--color-paper);
+}
+.membership-card__tagline {
+  font-size: 0.8rem;
+  color: rgba(251,249,245,0.7);
+}
+.membership-card__price {
+  font-family: var(--font-headline);
+  font-size: 1.1rem;
+  color: var(--color-sand);
+  margin-top: 0.2rem;
 }
 .membership-card__cta {
   margin-top: 0.5rem;
