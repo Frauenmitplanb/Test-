@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class="demo-banner">🚧 DEMO – Formular ist noch nicht mit einem echten Postfach verbunden.</div>
+<div class="demo-banner">🚧 DEMO – Design-Vorschau. Das Formular ist noch nicht mit einem echten Postfach verbunden.</div>
 
 <div class="preloader" id="preloader"><span class="preloader__word">Frauen mit Plan B</span></div>
 <div class="cursor-b" id="cursor-b" aria-hidden="true">B</div>
@@ -19,55 +19,77 @@
   <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
   <nav class="nav">
     <a href="index.html" data-magnetic>Home</a>
-    <a href="ueber-uns.html" data-magnetic>Über uns</a>
-    <a href="team.html" data-magnetic>Wer steckt dahinter</a>
+    <a href="die-idee.html" data-magnetic>Die Idee</a>
+    <a href="julia-und-stephie.html" data-magnetic>Julia &amp; Stephie</a>
   </nav>
-  <a href="newsletter.html" class="btn btn--small" data-magnetic>Plan B Post</a>
+  <a href="plan-b-post.html" class="btn btn--small" data-magnetic>Plan B Post</a>
 </header>
 
-<main>
-  <section class="section" style="padding-top: clamp(3rem, 6vw, 5rem);">
-    <p class="eyebrow" data-reveal-text>Plan B Post</p>
-    <h1 data-reveal-text>Die E-Mail für Frauen, die mehr wollen als nur Plan A.</h1>
-
-    <div class="newsletter-card" data-reveal>
-      <div class="newsletter-card__media">
-        <img src="assets/images/kontakt-gespraech.jpg" alt="Frauen mit Plan B im Gespräch" loading="lazy">
+<main id="top">
+  <section class="section nl-hero">
+    <div class="nl-hero__grid">
+      <div class="nl-hero__intro">
+        <p class="eyebrow" data-reveal-text data-reveal-onload>Plan B Post</p>
+        <h1 data-reveal-text data-reveal-onload>Die E-Mail für Frauen, die mehr wollen als nur Plan A.</h1>
+        <p class="nl-hero__lead" data-reveal data-reveal-onload>Keine 08/15-Newsletter-Mails, die ungelesen im Postfach vergammeln. Sondern <strong>Klartext, echte Erfahrungen und verdammt viel Business-Wissen</strong> rund um deinen Weg von Plan A(nstellung) zu deinem eigenen Plan B(usiness).</p>
+        <div class="nl-from" data-reveal data-reveal-onload>
+          <span class="nl-from__faces" aria-hidden="true">
+            <img src="assets/images/team-julia-cutout.webp" alt="">
+            <img src="assets/images/team-stephanie-cutout.webp" alt="">
+          </span>
+          <span>Regelmäßig von <strong>Julia &amp; Stephie</strong></span>
+        </div>
       </div>
-      <div class="newsletter-card__form">
-        <p style="font-size: 1.05rem;">Keine 08/15-Newsletter-Mails, die ungelesen im Postfach vergammeln.</p>
-        <p style="font-size: 1.05rem;">Sondern <strong>Klartext, echte Erfahrungen und verdammt viel Business-Wissen</strong> rund um deinen Weg von Plan A(nstellung) zu deinem eigenen Plan B(usiness).</p>
-        <p style="font-size: 1.05rem; margin-bottom: 1.75rem;">Damit du nicht noch mehr abspeicherst, konsumierst und zerdenkst. Stattdessen weißt du, <strong>was als Nächstes dran ist und machst es!</strong></p>
+
+      <div class="nl-form-card" id="anmelden" data-reveal data-reveal-onload>
+        <p class="nl-form-card__title">Plan B Post abonnieren</p>
         <div class="embed-consent" id="alfima-embed" data-embed-src="https://alfima.com/frauenmitplanb/leads/plan-b-post/embed">
           <div class="embed-consent__placeholder" id="alfima-embed-placeholder">
             <p>Das Anmeldeformular wird über unseren Anbieter Alfima eingebunden. Beim Laden werden Daten an Alfima übertragen.</p>
             <button type="button" class="btn btn--small" id="alfima-embed-load" data-magnetic>Formular laden &amp; zustimmen</button>
           </div>
         </div>
+        <p class="nl-demo">Nach dem Absenden bekommst du eine Bestätigungs-Mail. Bitte klicke den Link darin, um dich final einzutragen (Double-Opt-in).</p>
       </div>
     </div>
   </section>
 
-  <!-- WHATSAPP MEMBERSHIP CARD -->
-  <section class="section cta whatsapp-cta">
-    <p class="eyebrow eyebrow--light" data-reveal-text>Lieber unverbindlich reinschnuppern?</p>
-    <h2 class="cta__headline" data-reveal-text>Dann komm in den <em>Plan B Club</em>.</h2>
-    <p class="cta__sub" data-reveal>Kein oberflächliches Insta-Bla-Bla. Hier gehen wir richtig tief in die Materie.
-      Ehrliche Deep Dives, Business-Wissen, unsere Erfahrungen und der nötige Push, damit aus „Ich will mehr“
-      irgendwann „Ich mach's.“ wird.</p>
-    <a href="https://chat.whatsapp.com/IW5fSFVLf0m64qhpKW02oG?s=cl&amp;p=i&amp;mlu=0&amp;ilr=4" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer" data-magnetic data-reveal>Kostenlos in den Plan B Club →</a>
+  <section class="section nl-inhalt">
+    <div class="nl-inhalt__grid">
+      <div data-reveal>
+        <p class="eyebrow" data-reveal-text>Was dich erwartet</p>
+        <h2 data-reveal-text>Damit du nicht noch mehr abspeicherst, konsumierst und zerdenkst.</h2>
+        <ul class="nl-list">
+          <li><b>News</b>Was bei uns und im Plan B Club gerade passiert.</li>
+          <li><b>Tipps &amp; Tricks</b>Business-Wissen, das du direkt umsetzen kannst.</li>
+          <li><b>Eigene Stories aus unserem Business</b>Echte Erfahrungen – auch die Umwege.</li>
+          <li><b>Klartext</b>Damit du weißt, was als Nächstes dran ist – und es machst!</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <a class="membership-card" href="https://chat.whatsapp.com/IW5fSFVLf0m64qhpKW02oG?s=cl&amp;p=i&amp;mlu=0&amp;ilr=4" target="_blank" rel="noopener noreferrer" data-reveal aria-label="Zum Plan B Club">
-      <span class="membership-card__strap"></span>
-      <span class="membership-card__clip"></span>
-      <span class="membership-card__body">
-        <span class="membership-card__eyebrow">Mitgliedskarte</span>
-        <span class="membership-card__title">Plan B Club</span>
-        <span class="membership-card__tagline">für Frauen mit Drive</span>
-        <span class="membership-card__price">0 €</span>
-        <span class="membership-card__cta">Ich bin dabei →</span>
-      </span>
-    </a>
+  <section class="section club-mini">
+    <div class="club-mini__grid">
+      <div data-reveal>
+        <p class="eyebrow eyebrow--light">Lieber mittendrin statt nur dabei?</p>
+        <h2>Dann komm in den <em>Plan B Club</em>.</h2>
+        <p>Kein oberflächliches Insta-Bla-Bla. Hier gehen wir richtig tief in die Materie. Ehrliche Deep Dives, Business-Wissen, unsere Erfahrungen und der nötige Push, damit aus „Ich will mehr“ irgendwann <strong>„Ich mach's.“</strong> wird.</p>
+      </div>
+      <div class="club-mini__card">
+        <a class="membership-card" href="https://chat.whatsapp.com/IW5fSFVLf0m64qhpKW02oG?s=cl&amp;p=i&amp;mlu=0&amp;ilr=4" target="_blank" rel="noopener noreferrer" aria-label="Kostenlos in den Plan B Club auf WhatsApp">
+          <span class="membership-card__strap"></span>
+          <span class="membership-card__clip"></span>
+          <span class="membership-card__body">
+            <span class="membership-card__eyebrow">Mitgliedskarte</span>
+            <span class="membership-card__title">Plan B Club</span>
+            <span class="membership-card__tagline">für Frauen mit Drive</span>
+            <span class="membership-card__price">0 €</span>
+            <span class="membership-card__cta">Ich bin dabei →</span>
+          </span>
+        </a>
+      </div>
+    </div>
   </section>
 </main>
 
@@ -76,9 +98,9 @@
     <span class="logo"><img src="assets/images/logo.svg" alt="Frauen mit Plan B" class="logo-img"></span>
     <nav class="nav">
       <a href="index.html" data-magnetic>Home</a>
-      <a href="ueber-uns.html" data-magnetic>Über uns</a>
-      <a href="team.html" data-magnetic>Wer steckt dahinter</a>
-      <a href="newsletter.html" data-magnetic>Plan B Post</a>
+      <a href="die-idee.html" data-magnetic>Die Idee</a>
+      <a href="julia-und-stephie.html" data-magnetic>Julia &amp; Stephie</a>
+      <a href="plan-b-post.html" data-magnetic>Plan B Post</a>
     </nav>
     <div class="site-footer__social">
       <a href="https://www.facebook.com/profile.php?id=61575039741499" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
