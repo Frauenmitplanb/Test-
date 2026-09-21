@@ -1437,9 +1437,9 @@ p { margin: 0 0 1em; }
 
 .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; text-align: left; }
 .duo div { background: var(--color-white); border-radius: 14px; padding: 1.25rem 1.4rem; }
-.duo b { display: block; font-family: var(--font-headline); font-weight: 400; font-size: 1.35rem; color: var(--color-forest); margin-bottom: 0.35rem; }
-.duo-lines { display: grid; gap: 0.5rem; margin: 1.75rem 0; }
-.duo-lines p { margin: 0; font-family: var(--font-headline); font-size: clamp(1.2rem,2.2vw,1.55rem); font-style: italic; }
+.duo b { display: block; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.01em; color: var(--color-forest); margin-bottom: 0.35rem; }
+.duo-lines { display: grid; gap: 0.4rem; margin: 1.75rem 0; }
+.duo-lines p { margin: 0; font-style: italic; font-size: 1.08rem; }
 @media (max-width: 600px) { .duo { grid-template-columns: 1fr; } }
 .cta-links { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
 
