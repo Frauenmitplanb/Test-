@@ -11,15 +11,9 @@
 
 <div class="demo-banner">🚧 DEMO – Test-Website zur Design-Vorschau. Inhalte, Texte &amp; Bilder sind teils Platzhalter.</div>
 
-<!-- Preloader -->
-<div class="preloader" id="preloader">
-  <span class="preloader__word">Frauen mit Plan B</span>
-</div>
+<div class="preloader" id="preloader"><span class="preloader__word">Frauen mit Plan B</span></div>
 <div class="cursor-b" id="cursor-b" aria-hidden="true">B</div>
 
-<!-- Custom cursor -->
-
-<!-- Header -->
 <header class="site-header" data-reveal>
   <a href="#top" class="logo"><img src="assets/images/logo.svg" alt="Frauen mit Plan B" class="logo-img"></a>
   <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
@@ -34,40 +28,39 @@
 <main id="top">
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero__bg"></div>
-    <div class="hero__intro" aria-hidden="true">
-      <picture>
-        <source media="(max-width: 640px)" srcset="assets/images/hero-intro-1-mobile.jpg">
-        <img class="hero__intro-img" src="assets/images/hero-intro-1.jpg" alt="" loading="eager">
-      </picture>
-      <picture>
-        <source media="(max-width: 640px)" srcset="assets/images/hero-intro-2-mobile.jpg">
-        <img class="hero__intro-img" src="assets/images/hero-intro-2.jpg" alt="" loading="eager">
-      </picture>
-      <picture>
-        <source media="(max-width: 640px)" srcset="assets/images/hero-intro-3-mobile.jpg">
-        <img class="hero__intro-img" src="assets/images/hero-intro-3.jpg" alt="" loading="eager">
-      </picture>
+  <section class="hero heroA">
+    <div class="heroA__bg" aria-hidden="true">
+      <img class="heroA__img" src="assets/images/hero-intro-1.jpg" alt="" loading="eager" decoding="async">
+      <img class="heroA__img" src="assets/images/hero-intro-2.jpg" alt="" loading="eager" decoding="async">
     </div>
-    <div class="hero__content">
-      <p class="eyebrow" data-reveal-text>Für Frauen, die mehr wollen als Plan A(nstellung).</p>
-      <h1 class="hero__headline">
-        <span class="line" data-reveal-text>Dein zweites Standbein neben dem Job.</span>
-        <span class="line" data-reveal-text>Mach deine Stärken zu deinem <em>PLAN B(usiness)</em>.</span>
-      </h1>
-      <p class="hero__sub" data-reveal>
-        Du musst nicht kündigen und brauchst noch nicht mal eine Idee. Wir zeigen dir, wie du dir nebenberuflich
-        ein eigenes Online Business aufbaust – Schritt für Schritt und ohne Bullshit.
-      </p>
-      <div class="hero__actions hero__actions--single" data-reveal>
-        <a href="https://chat.whatsapp.com/IW5fSFVLf0m64qhpKW02oG?s=cl&amp;p=i&amp;mlu=0&amp;ilr=4" class="btn btn--light" target="_blank" rel="noopener noreferrer" data-magnetic>Plan B Club kostenlos beitreten</a>
-        <p class="hero__cta-note">Kostenlose WhatsApp-Community · Deep Dives, echte Erfahrungen und der Push, ins Machen zu kommen.</p>
-        <a href="plan-b-post.html" class="hero__alt">Lieber erst mal lesen? Plan B Post abonnieren</a>
-      </div>
+    <div class="heroA__in">
+      <p class="heroA__eye">Für Frauen, die mehr wollen als Plan A(nstellung).</p>
+      <h1 class="heroA__h1">Dein Job ist Plan A.<br>Dein eigenes Business wird <i>Plan B.</i></h1>
+      <p class="heroA__body">Bau dir mit uns <b>Schritt für Schritt und so simpel wie möglich</b> neben deinem Job ein eigenes Online Business auf, das zu dir und deinem Leben passt. <b class="heroA__gainpart">Für mehr Unabhängigkeit und mehr finanziellen, zeitlichen und beruflichen Spielraum.</b></p>
+      <a class="btn btn--light heroA__btn" data-magnetic data-club-open role="button" tabindex="0">Plan B Club kostenlos beitreten</a>
+      <p class="heroA__note">Kostenlose WhatsApp-Community · Deep Dives, echte Erfahrungen und der Push, ins Machen zu kommen.</p>
+      <a href="plan-b-post.html" class="heroA__alt">Lieber erst mal lesen? Plan B Post abonnieren</a>
     </div>
-    <div class="scroll-hint" data-reveal><span></span>Scroll</div>
   </section>
+
+  <!-- ZAHLEN-KACHELN -->
+  <div class="proof" id="proof">
+    <article class="proof__card">
+      <span class="proof__eb">Zusammen</span>
+      <span class="proof__num" data-count="25" data-suffix="+">0</span>
+      <span class="proof__label">Jahre HR &amp; Führung</span>
+    </article>
+    <article class="proof__card">
+      <span class="proof__eb">Zusammen</span>
+      <span class="proof__num" data-count="9" data-suffix="+">0</span>
+      <span class="proof__label">Jahre Marketing &amp; Personal Branding</span>
+    </article>
+    <article class="proof__card">
+      <span class="proof__eb">Seit 2024</span>
+      <span class="proof__num proof__num--word">Madame MKTG</span>
+      <span class="proof__label">Unsere eigene Online-Marketing-Agentur</span>
+    </article>
+  </div>
 
   <!-- DEIN JETZT -->
   <section class="section jetzt" id="jetzt">
@@ -75,16 +68,152 @@
       <div class="section__text">
         <p class="eyebrow" data-reveal-text>Dein Jetzt</p>
         <h2 class="reveal-lines" data-reveal-text>Vielleicht erkennst du dich hier wieder…</h2>
-        <ul class="pain-list" data-reveal>
+        <p class="jetzt__lead" data-reveal>Vielleicht steckst du gerade in einem Job, von dem du einfach weißt: <em>Das will ich nicht mein Leben lang machen.</em> Vielleicht findest du ihn sogar ok. Aber tief in dir drin spürst du, dass das nicht auf Dauer so weitergehen kann.</p>
+        <ul class="pain-list" data-reveal-stagger>
           <li><strong>Der Takt:</strong> Dein Job bestimmt gefühlt <strong>3/4 deines Lebens</strong>. Deine eigenen Wünsche passen nur noch ins Wochenende.</li>
-          <li><strong>Das Risiko:</strong> Du bringst Leistung – und trotzdem hängt deine ganze Zukunft an einem Faden: ein Arbeitgeber, ein Gehalt, <strong>ein Plan A</strong>.</li>
+          <li><strong>Das Risiko:</strong> Du bringst Leistung und trotzdem hängt deine ganze Zukunft an einem Faden: ein Arbeitgeber, ein Gehalt, <strong>ein Plan A</strong>.</li>
           <li><strong>Die Zweifel:</strong> Sobald du an eine Alternative denkst, meldet sich die Stimme: <em>„Das funktioniert nur bei anderen.“</em></li>
           <li><strong>Der Weckruf:</strong> Und immer öfter denkst du: <em>„Das kann doch nicht alles gewesen sein?“</em></li>
         </ul>
+        <p class="jetzt__name" data-reveal>Das hat einen Namen: <strong>Du lebst an deinen Stärken vorbei.</strong><span>Und irgendwann fängt man leider an, das normal zu finden.</span></p>
       </div>
       <div class="section__media" data-parallax="0.08">
-        <img src="assets/images/about-working.jpg" alt="Julia und Stephie arbeiten gemeinsam an ihrem Business" class="media-frame" style="width:100%; height:100%; object-fit:cover;" loading="lazy" data-reveal>
+        <img src="assets/images/about-working.jpg" alt="Julia und Stephanie am Whiteboard" class="media-frame" style="width:100%; height:100%; object-fit:cover;" loading="lazy" data-reveal>
       </div>
+    </div>
+  </section>
+
+  <!-- WARUM PLAN B -->
+  <section class="section warum" id="warum">
+    <div class="warum__inner">
+      <p class="eyebrow eyebrow--light" data-reveal-text>Warum Plan B?</p>
+      <h2 data-reveal-text>Heute braucht jede Frau<br>eine <em>zweite Option.</em></h2>
+      <p class="warum__lead" data-reveal>Es geht nicht darum, direkt morgen zu kündigen. Wir wollen dir zeigen, wie riskant es ist, deine komplette berufliche und finanzielle Zukunft von einer einzigen Anstellung abhängig zu machen.</p>
+      <p class="warum__ask" data-reveal><span>„Aber das ist eben so!“</span><strong>Wer hat das eigentlich festgelegt?</strong></p>
+
+      <div class="warum__grid">
+        <article class="fact" data-fact>
+          <p class="fact__kicker">Aus 25 Jahren Personalwesen</p>
+          <h3>Frauen in Anstellung verdienen<br>bis zu <b>40 % weniger.</b></h3>
+          <p class="fact__sub">Bei vergleichbaren Positionen.</p>
+          <div class="coinrow"><span class="coinrow__label">Er</span><span class="coins "><span class="coin is-full" style="--i:0"></span><span class="coin is-full" style="--i:1"></span><span class="coin is-full" style="--i:2"></span><span class="coin is-full" style="--i:3"></span><span class="coin is-full" style="--i:4"></span><span class="coin is-full" style="--i:5"></span><span class="coin is-full" style="--i:6"></span><span class="coin is-full" style="--i:7"></span><span class="coin is-full" style="--i:8"></span><span class="coin is-full" style="--i:9"></span></span></div>
+          <div class="coinrow"><span class="coinrow__label">Sie</span><span class="coins coins--w"><span class="coin is-full" style="--i:0"></span><span class="coin is-full" style="--i:1"></span><span class="coin is-full" style="--i:2"></span><span class="coin is-full" style="--i:3"></span><span class="coin is-full" style="--i:4"></span><span class="coin is-full" style="--i:5"></span><span class="coin is-empty" style="--i:6"></span><span class="coin is-empty" style="--i:7"></span><span class="coin is-empty" style="--i:8"></span><span class="coin is-empty" style="--i:9"></span></span></div>
+          <p class="fact__cap">Im Extremfall blieben bei ihr 60 Cent für jeden Euro bei ihm.</p>
+          <p class="fact__voice">Das ist keine Statistik. Das ist das, was wir in hunderten Gehaltstabellen und Arbeitsverträgen selbst gesehen haben.</p>
+          <p class="fact__note">Offiziell liegt der Unterschied bei rund 16 % pro Stunde. Das ist der Durchschnitt über alle Branchen und Betriebe. In den Listen, die auf unseren Schreibtischen lagen, war der Abstand deutlich größer.</p>
+        </article>
+
+        <article class="fact" data-fact>
+          <p class="fact__kicker">Wer beruflich zurücksteckt</p>
+          <h3>7 von 10 Müttern arbeiten Teilzeit.<br><b>Bei den Vätern ist es 1.</b></h3>
+          <div class="figrow"><span class="figrow__label">Mütter</span><span class="figs figs--w"><svg aria-hidden="true" class="fig is-on" style="--i:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="fig is-on" style="--i:1" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="fig is-on" style="--i:2" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="fig is-on" style="--i:3" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="fig is-on" style="--i:4" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="fig is-on" style="--i:5" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="fig is-on" style="--i:6" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="fig" style="--i:7" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="fig" style="--i:8" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="fig" style="--i:9" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg></span></div>
+          <div class="figrow"><span class="figrow__label">Väter</span><span class="figs "><svg aria-hidden="true" class="fig is-on" style="--i:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-5 8.4h10c.9 0 1.6.8 1.5 1.7l-.7 5.3h-1.9l-.5 5.4h-6.8l-.5-5.4H6.2l-.7-5.3c-.1-.9.6-1.7 1.5-1.7Z"/></svg><svg aria-hidden="true" class="fig" style="--i:1" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-5 8.4h10c.9 0 1.6.8 1.5 1.7l-.7 5.3h-1.9l-.5 5.4h-6.8l-.5-5.4H6.2l-.7-5.3c-.1-.9.6-1.7 1.5-1.7Z"/></svg><svg aria-hidden="true" class="fig" style="--i:2" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-5 8.4h10c.9 0 1.6.8 1.5 1.7l-.7 5.3h-1.9l-.5 5.4h-6.8l-.5-5.4H6.2l-.7-5.3c-.1-.9.6-1.7 1.5-1.7Z"/></svg><svg aria-hidden="true" class="fig" style="--i:3" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-5 8.4h10c.9 0 1.6.8 1.5 1.7l-.7 5.3h-1.9l-.5 5.4h-6.8l-.5-5.4H6.2l-.7-5.3c-.1-.9.6-1.7 1.5-1.7Z"/></svg><svg aria-hidden="true" class="fig" style="--i:4" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-5 8.4h10c.9 0 1.6.8 1.5 1.7l-.7 5.3h-1.9l-.5 5.4h-6.8l-.5-5.4H6.2l-.7-5.3c-.1-.9.6-1.7 1.5-1.7Z"/></svg><svg aria-hidden="true" class="fig" style="--i:5" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-5 8.4h10c.9 0 1.6.8 1.5 1.7l-.7 5.3h-1.9l-.5 5.4h-6.8l-.5-5.4H6.2l-.7-5.3c-.1-.9.6-1.7 1.5-1.7Z"/></svg><svg aria-hidden="true" class="fig" style="--i:6" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-5 8.4h10c.9 0 1.6.8 1.5 1.7l-.7 5.3h-1.9l-.5 5.4h-6.8l-.5-5.4H6.2l-.7-5.3c-.1-.9.6-1.7 1.5-1.7Z"/></svg><svg aria-hidden="true" class="fig" style="--i:7" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-5 8.4h10c.9 0 1.6.8 1.5 1.7l-.7 5.3h-1.9l-.5 5.4h-6.8l-.5-5.4H6.2l-.7-5.3c-.1-.9.6-1.7 1.5-1.7Z"/></svg><svg aria-hidden="true" class="fig" style="--i:8" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-5 8.4h10c.9 0 1.6.8 1.5 1.7l-.7 5.3h-1.9l-.5 5.4h-6.8l-.5-5.4H6.2l-.7-5.3c-.1-.9.6-1.7 1.5-1.7Z"/></svg><svg aria-hidden="true" class="fig" style="--i:9" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-5 8.4h10c.9 0 1.6.8 1.5 1.7l-.7 5.3h-1.9l-.5 5.4h-6.8l-.5-5.4H6.2l-.7-5.3c-.1-.9.6-1.7 1.5-1.7Z"/></svg></span></div>
+          <p class="fact__voice">Aus unserer Zeit im Personalwesen: Nach der Elternzeit werden Mütter als genau jene abgestempelt und aufs Abstellgleis geschoben.</p>
+          <p class="fact__note">66,4 % der erwerbstätigen Mütter arbeiten in Teilzeit, bei den Vätern sind es 8,6 %.</p>
+        </article>
+
+        <article class="fact" data-fact>
+          <p class="fact__kicker">Und am Ende des Arbeitslebens</p>
+          <h3>Jede 5. Frau über 65 ist<br><b>armutsgefährdet.</b></h3>
+          <div class="crowd" role="img" aria-label="Von 120 Frauen über 65 sind 24 armutsgefährdet, also jede fünfte."><svg aria-hidden="true" class="figc" style="--i:0;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:1;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:2;--h:4" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:3;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:4;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:5;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:6;--h:10" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:7;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:8;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:9;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:10;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:11;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:12;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:13;--h:15" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:14;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:15;--h:19" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:16;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:17;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:18;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:19;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:20;--h:1" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:21;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:22;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:23;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:24;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:25;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:26;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:27;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:28;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:29;--h:12" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:30;--h:13" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:31;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:32;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:33;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:34;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:35;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:36;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:37;--h:22" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:38;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:39;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:40;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:41;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:42;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:43;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:44;--h:6" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:45;--h:7" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:46;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:47;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:48;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:49;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:50;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:51;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:52;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:53;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:54;--h:17" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:55;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:56;--h:21" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:57;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:58;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:59;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:60;--h:2" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:61;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:62;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:63;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:64;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:65;--h:8" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:66;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:67;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:68;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:69;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:70;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:71;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:72;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:73;--h:16" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:74;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:75;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:76;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:77;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:78;--h:23" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:79;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:80;--h:3" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:81;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:82;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:83;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:84;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:85;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:86;--h:11" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:87;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:88;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:89;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:90;--h:14" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:91;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:92;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:93;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:94;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:95;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:96;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:97;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:98;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:99;--h:24" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:100;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:101;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:102;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:103;--h:5" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:104;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:105;--h:9" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:106;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:107;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:108;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:109;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:110;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:111;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:112;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:113;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:114;--h:18" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc is-hot" style="--i:115;--h:20" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:116;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:117;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:118;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg><svg aria-hidden="true" class="figc" style="--i:119;--h:0" viewBox="0 0 24 24"><path d="M12 2.6a3.1 3.1 0 1 1 0 6.2 3.1 3.1 0 0 1 0-6.2Zm-2.6 7.8h5.2c.8 0 1.5.53 1.72 1.3l1.78 6.3c.2.7-.32 1.4-1.1 1.4h-1.44l-.42 4.6h-2.14l-.34-3.5h-.92l-.34 3.5H9.26l-.42-4.6H7.4c-.78 0-1.3-.7-1.1-1.4l1.78-6.3c.22-.77.92-1.3 1.72-1.3Z"/></svg></div>
+          <p class="crowd__cap">Jede Fünfte. Das ist keine Randgruppe.</p>
+          <p class="jars__label">Eigene Alterseinkünfte im Schnitt</p>
+          <div class="jars">
+            <div class="jar"><span class="jar__fill" style="--h:100%"></span><span class="jar__val">100 €</span><span class="jar__lab">Er</span></div>
+            <div class="jar"><span class="jar__fill jar__fill--w" style="--h:64%"></span><span class="jar__val">64 €</span><span class="jar__lab">Sie</span></div>
+          </div>
+          <p class="jars__gap">10.240 € weniger im Jahr. Das sind <b>rund 850 € weniger. Und das jeden einzelnen Monat.</b> Rechne dir das mal auf mindestens 20 Jahre hoch …</p>
+          <p class="fact__voice">Zufall? Nein. Wer im Arbeitsleben weniger verdient und häufiger in Teilzeit arbeitet, erwirbt geringere Rentenansprüche. Fakt.</p>
+          <p class="fact__note">Armutsgefährdet heißt: weniger als 1.445 € netto im Monat. Bei Frauen ab 65 sind das 21,3 %, bei Männern 17,3 %. Ihre eigenen Alterseinkünfte liegen im Schnitt <b>36 % niedriger.</b> Statistisches Bundesamt, 2025.</p>
+        </article>
+
+        <article class="fact" data-fact>
+          <p class="fact__kicker">Und die Arbeitswelt wackelt</p>
+          <h3>Jeden Werktag melden rund<br><b>100 Unternehmen</b> Insolvenz an.</h3>
+          <div class="bizgrid"><span class="biz is-out" style="--i:0"></span><span class="biz is-out" style="--i:1"></span><span class="biz is-out" style="--i:2"></span><span class="biz is-out" style="--i:3"></span><span class="biz is-out" style="--i:4"></span><span class="biz is-out" style="--i:5"></span><span class="biz is-out" style="--i:6"></span><span class="biz is-out" style="--i:7"></span><span class="biz is-out" style="--i:8"></span><span class="biz is-out" style="--i:9"></span><span class="biz is-out" style="--i:10"></span><span class="biz is-out" style="--i:11"></span><span class="biz is-out" style="--i:12"></span><span class="biz is-out" style="--i:13"></span><span class="biz is-out" style="--i:14"></span><span class="biz is-out" style="--i:15"></span><span class="biz is-out" style="--i:16"></span><span class="biz is-out" style="--i:17"></span><span class="biz is-out" style="--i:18"></span><span class="biz is-out" style="--i:19"></span><span class="biz is-out" style="--i:20"></span><span class="biz is-out" style="--i:21"></span><span class="biz is-out" style="--i:22"></span><span class="biz is-out" style="--i:23"></span><span class="biz is-out" style="--i:24"></span><span class="biz is-out" style="--i:25"></span><span class="biz is-out" style="--i:26"></span><span class="biz is-out" style="--i:27"></span><span class="biz is-out" style="--i:28"></span><span class="biz is-out" style="--i:29"></span><span class="biz is-out" style="--i:30"></span><span class="biz is-out" style="--i:31"></span><span class="biz is-out" style="--i:32"></span><span class="biz is-out" style="--i:33"></span><span class="biz is-out" style="--i:34"></span><span class="biz is-out" style="--i:35"></span><span class="biz is-out" style="--i:36"></span><span class="biz is-out" style="--i:37"></span><span class="biz is-out" style="--i:38"></span><span class="biz is-out" style="--i:39"></span><span class="biz is-out" style="--i:40"></span><span class="biz is-out" style="--i:41"></span><span class="biz is-out" style="--i:42"></span><span class="biz is-out" style="--i:43"></span><span class="biz is-out" style="--i:44"></span><span class="biz is-out" style="--i:45"></span><span class="biz is-out" style="--i:46"></span><span class="biz is-out" style="--i:47"></span><span class="biz is-out" style="--i:48"></span><span class="biz is-out" style="--i:49"></span><span class="biz is-out" style="--i:50"></span><span class="biz is-out" style="--i:51"></span><span class="biz is-out" style="--i:52"></span><span class="biz is-out" style="--i:53"></span><span class="biz is-out" style="--i:54"></span><span class="biz is-out" style="--i:55"></span><span class="biz is-out" style="--i:56"></span><span class="biz is-out" style="--i:57"></span><span class="biz is-out" style="--i:58"></span><span class="biz is-out" style="--i:59"></span><span class="biz is-out" style="--i:60"></span><span class="biz is-out" style="--i:61"></span><span class="biz is-out" style="--i:62"></span><span class="biz is-out" style="--i:63"></span><span class="biz is-out" style="--i:64"></span><span class="biz is-out" style="--i:65"></span><span class="biz is-out" style="--i:66"></span><span class="biz is-out" style="--i:67"></span><span class="biz is-out" style="--i:68"></span><span class="biz is-out" style="--i:69"></span><span class="biz is-out" style="--i:70"></span><span class="biz is-out" style="--i:71"></span><span class="biz is-out" style="--i:72"></span><span class="biz is-out" style="--i:73"></span><span class="biz is-out" style="--i:74"></span><span class="biz is-out" style="--i:75"></span><span class="biz is-out" style="--i:76"></span><span class="biz is-out" style="--i:77"></span><span class="biz is-out" style="--i:78"></span><span class="biz is-out" style="--i:79"></span><span class="biz is-out" style="--i:80"></span><span class="biz is-out" style="--i:81"></span><span class="biz is-out" style="--i:82"></span><span class="biz is-out" style="--i:83"></span><span class="biz is-out" style="--i:84"></span><span class="biz is-out" style="--i:85"></span><span class="biz is-out" style="--i:86"></span><span class="biz is-out" style="--i:87"></span><span class="biz is-out" style="--i:88"></span><span class="biz is-out" style="--i:89"></span><span class="biz is-out" style="--i:90"></span><span class="biz is-out" style="--i:91"></span><span class="biz is-out" style="--i:92"></span><span class="biz is-out" style="--i:93"></span><span class="biz is-out" style="--i:94"></span><span class="biz is-out" style="--i:95"></span><span class="biz is-out" style="--i:96"></span><span class="biz is-out" style="--i:97"></span><span class="biz is-out" style="--i:98"></span><span class="biz is-out" style="--i:99"></span></div>
+          <p class="fact__voice">Was wir dir aus 25+ Jahren Personalwesen sagen können: Wir haben Kündigungen für Menschen geschrieben, die nichts falsch gemacht hatten!</p>
+          <p class="fact__note">Im Juni 2026 waren es 2.266 Unternehmensinsolvenzen, <b>15,8 % mehr</b> als ein Jahr zuvor. Hinter jeder stecken Menschen, die ihren Arbeitsplatz verlieren.</p>
+        </article>
+
+        <article class="fact" data-fact>
+          <p class="fact__kicker">Und dann ist da noch KI</p>
+          <h3>Dein Job verschwindet nicht über Nacht.<br><b>Aber deine Aufgaben verändern sich.</b></h3>
+          <div class="tasks">
+            <span class="task is-ai" style="--i:0">Recherche</span>
+            <span class="task is-ai" style="--i:1">Texte</span>
+            <span class="task is-ai" style="--i:2">Auswertung</span>
+            <span class="task is-ai" style="--i:3">Routineaufgaben</span>
+            <span class="task" style="--i:4">Beratung</span>
+            <span class="task" style="--i:5">Konzept</span>
+            <span class="task" style="--i:6">Entscheidung</span>
+            <span class="task" style="--i:7">Beziehung</span>
+          </div>
+          <p class="tasks__legend">
+            <span class="lgi"><span class="dot dot--ai"></span>übernimmt zunehmend KI</span>
+            <span class="lgi"><span class="dot"></span>bleibt (Stand heute) NOCH bei dir</span>
+          </p>
+          <p class="fact__note">KI verändert in rasantem Tempo, welche Fähigkeiten Unternehmen brauchen. Wer lernt, sie für sich zu nutzen, erweitert seine Möglichkeiten. Wer sich nur auf den Status quo verlässt, macht sich abhängiger davon.</p>
+        </article>
+      </div>
+
+      <div class="warum__close">
+        <p class="warum__text" data-reveal>Gleichzeitig verändert sich die Arbeitswelt gerade mehr als spürbar. Unternehmen sparen Stellen ein, Geschäftsmodelle verschwinden, neue entstehen und KI verändert, welche Fähigkeiten morgen gefragt sind.</p>
+        <p class="warum__text" data-reveal>Und trotzdem bauen wir unser ganzes Leben auf einen einzigen Plan auf: <b>Plan A(nstellung).</b> Nur ein Arbeitgeber! Nur ein Gehalt! Nur eine einzige Entscheidung von anderen und plötzlich kann sich verdammt viel verändern.</p>
+        <p class="warum__claim" data-reveal>Jede Frau in Anstellung braucht eine zweite Option.<br><strong>Nicht irgendwann, wenn Plan A nicht mehr funktioniert, sondern solange du ihn noch hast!</strong></p>
+        <p class="warum__door" data-reveal><span>Wir könnten an dieser Stelle wütend werden. Wir haben uns für etwas anderes entschieden.</span><strong>Wir müssen das System nicht mit dem Hammer zertrümmern.<br>Wir bauen einfach eine <em>Tür</em> ein.</strong></p>
+        <p class="warum__src" data-reveal>Zahlen: Statistisches Bundesamt. Gender Pay Gap und Teilzeitquoten 2025, Unternehmensinsolvenzen Juni 2026, Armutsgefährdung und Alterseinkünfte aus EU-SILC 2025 (veröffentlicht 2026, Einkommensjahr 2024). Stand der Angaben bitte vor Veröffentlichung prüfen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZWISCHENBAND -->
+  <section class="pbband" data-devo aria-label="Warum jede Frau einen Plan B braucht">
+    <div class="pbband__in">
+      <p class="pbband__say">
+        <span class="pbband__ln">Ein Job kann dein Plan A sein.</span><br>
+        <span class="pbband__ln">Deine einzige Option sollte er nie sein.</span><br>
+        <span class="pbband__gold">Deshalb braucht jede Frau einen <i>Plan B.</i></span>
+      </p>
+    </div>
+  </section>
+
+  <!-- RECHNE MAL NACH -->
+  <section class="section rechne" id="rechne">
+    <div class="rk__in">
+      <p class="eyebrow" data-reveal-text>Rechne mal nach</p>
+      <h2 data-reveal-text>Und was kostet dich dein <em>Plan A</em> wirklich?</h2>
+      <p class="rk__lead" data-reveal><strong class="rk__leadHit">Tipp die Kästchen an, die bei dir zutreffen und sei ehrlich zu dir selbst.</strong> Dann schau unten, welches Ergebnis dabei rauskommt. Keiner sieht diese Auswertung, nur du, also hab keine Angst.</p>
+      <div class="rk__point" aria-hidden="true" data-reveal>
+        <svg viewBox="0 0 150 104" xmlns="http://www.w3.org/2000/svg"><path d="M8 10C33 3 72 8 98 30c16 13 23 30 24 50" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/><path d="M107 74c6 10 12 16 15 21 3-6 8-12 15-21" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="rk__chips" id="rkChips" data-reveal>
+        <button type="button" class="rk__chip" data-h="3" aria-pressed="false"><span aria-hidden="true">✓</span>Überstunden, die niemand bezahlt<i>3 Std</i></button>
+        <button type="button" class="rk__chip" data-h="5" aria-pressed="false"><span aria-hidden="true">✓</span>Der Arbeitsweg<i>5 Std</i></button>
+        <button type="button" class="rk__chip" data-h="2" aria-pressed="false"><span aria-hidden="true">✓</span>E-Mails am Abend und am Wochenende<i>2 Std</i></button>
+        <button type="button" class="rk__chip" data-h="2" aria-pressed="false"><span aria-hidden="true">✓</span>(Sinnlose) Meetings, in denen du nichts zu sagen hast<i>2 Std</i></button>
+        <button type="button" class="rk__chip" data-h="4" aria-pressed="false"><span aria-hidden="true">✓</span>Arbeit, die du gedanklich mit nach Hause nimmst<i>4 Std</i></button>
+        <button type="button" class="rk__chip" data-h="3" aria-pressed="false"><span aria-hidden="true">✓</span>Aufgaben, die eigentlich nicht deine sind<i>3 Std</i></button>
+        <button type="button" class="rk__chip" data-h="2" aria-pressed="false"><span aria-hidden="true">✓</span>Der Sonntagabend, an dem du schon an Montag denkst<i>2 Std</i></button>
+        <button type="button" class="rk__chip" data-h="2" aria-pressed="false"><span aria-hidden="true">✓</span>Dich nach Feierabend zu Hause über Kolleg:innen aufregen<i>2 Std</i></button>
+        <button type="button" class="rk__chip" data-h="1" aria-pressed="false"><span aria-hidden="true">✓</span>Diskussionen über Urlaub, Brückentage und/oder Kita-Zeiten<i>1 Std</i></button>
+        <button type="button" class="rk__chip" data-h="2" aria-pressed="false"><span aria-hidden="true">✓</span>Weiterbildung in deiner Freizeit, für deinen Arbeitgeber<i>2 Std</i></button>
+        <button type="button" class="rk__chip" data-h="1" aria-pressed="false"><span aria-hidden="true">✓</span>Das Gefühl, dich rechtfertigen zu müssen<i>1 Std</i></button>
+        <button type="button" class="rk__chip" data-h="2" aria-pressed="false"><span aria-hidden="true">✓</span>Warten auf Entscheidungen, die andere treffen<i>2 Std</i></button>
+        <button type="button" class="rk__chip" data-h="2" aria-pressed="false"><span aria-hidden="true">✓</span>Dich kleiner machen, als du bist<i>2 Std</i></button>
+      </div>
+      <div class="rk__tools" data-reveal>
+        <button type="button" class="rk__tool" id="rkReset">↺ Zurücksetzen</button>
+      </div>
+      <p class="rk__resultHead" data-reveal>Dein Ergebnis</p>
+      <div class="rk__meter" data-reveal>
+        <span class="rk__cell"><span class="rk__num" id="rkH">0</span><span class="rk__lab">Std pro Woche</span></span>
+        <span class="rk__cell"><span class="rk__num" id="rkD">0</span><span class="rk__lab">Tage pro Jahr</span></span>
+        <span class="rk__cell"><span class="rk__num" id="rkM">0</span><span class="rk__lab">Monate in 10 Jahren</span></span>
+      </div>
+      <p class="rk__bill" data-reveal>Deinen Arbeitgeber kostet das nichts. Er bezahlt deine vertraglichen Stunden, keine Minute mehr!</p>
+      <p class="rk__punch" id="rkPunch">Das ist die Rechnung, die du mit deiner Lebenszeit für <em>Plan A(bhängigkeit)</em> bezahlst!</p>
+      <p class="rk__fine" data-reveal>Grobe Hochrechnung, nicht jeder Posten fällt jede Woche an. Sie zeigt trotzdem ziemlich deutlich, wohin deine Zeit geht.</p>
+      <p class="rk__close" data-reveal><strong class="rk__closeHead">Ein Plan B verschiebt diese Rechnung zu deinen Gunsten.</strong><span>Denn sobald er anläuft, hast du die Freiheit zu wählen, welche Posten du von dieser Liste streichst und wie viel Lebenszeit du dir zurückholst.</span></p>
     </div>
   </section>
 
@@ -95,62 +224,82 @@
       <h2 class="manifesto__statement" data-reveal-text>
         Wir sind nicht gegen Arbeit.<br>
         Wir sind gegen <em>Abhängigkeit.</em>
+        <span class="manifesto__for">Wir sind für ein Leben nach <em>deinen eigenen Regeln.</em></span>
       </h2>
       <p class="manifesto__text" data-reveal>
-        In über 25 Jahren HR haben wir gesehen, wie Arbeitgeber entscheiden – und wie wenig du davon selbst in der Hand hast.
+        In über 25 Jahren HR haben wir gesehen, wie Arbeitgeber entscheiden, dich bewerten und wie wenig du davon selbst in der Hand hast.
         Solange deine Zukunft an einer einzigen Anstellung hängt, hast du nur einen Plan: <em class="nowrap">Plan A(bhängigkeit)</em>.
       </p>
       <p class="manifesto__text manifesto__text--strong" data-reveal>Aber was wäre, wenn…</p>
       <ul class="manifesto__list" data-reveal-stagger>
         <li>… dein Gehalt nicht mehr deine einzige Einnahmequelle wäre?</li>
         <li>… du etwas Eigenes hättest, das auf deinen echten Stärken aufbaut?</li>
-        <li>… du irgendwann selbst entscheidest, ob dein Job dein Plan A bleibt?</li>
+        <li>… du irgendwann selbst entscheidest, ob dein Job wirklich noch dein Plan A bleibt?</li>
       </ul>
+      <p class="manifesto__mission" data-reveal>Wir wollen Freiheit zum <em>Normalzustand</em> machen.</p>
     </div>
   </section>
 
   <!-- PLAN A / PLAN B -->
   <section class="section compare">
     <p class="eyebrow" data-reveal-text>Die Strategie</p>
-    <h2 data-reveal-text>Plan A bleibt. Plan B kommt dazu.</h2>
+    <h2 data-reveal-text>Plan A bleibt.<br><span class="compare__plus">Plan B kommt dazu.</span></h2>
     <div class="compare__grid">
       <div class="compare__card" data-reveal>
-        <span class="compare__label">Plan A – Deine Anstellung</span>
-        <p>Sicherheit auf dem Papier. In Wahrheit: abhängig von einem Arbeitgeber, fremden Entscheidungen und
-          einem einzigen Gehaltszettel. Unser HR-Wissen sagt: Keine Anstellung ist wirklich sicher.</p>
+        <span class="compare__label">Plan A: Deine Anstellung</span>
+        <p>Sicherheit auf dem Papier. In Wahrheit: abhängig von einem Arbeitgeber, fremden Entscheidungen, einem einzigen Gehaltszettel und jeder Menge <strong>unbezahlter Lebenszeit</strong>. Unser HR-Wissen: Keine Anstellung ist wirklich sicher.</p>
       </div>
       <div class="compare__arrow" aria-hidden="true">→</div>
       <div class="compare__card compare__card--accent" data-reveal>
-        <span class="compare__label">Plan B – Dein eigenes Ding</span>
-        <p>Ein simples Online-Business neben deinem Job. Auf deinen Stärken aufgebaut, ohne Technik-Frust und
-          ohne Scam. Bis <em>du</em> irgendwann selbst entscheidest, was daraus wird.</p>
+        <span class="compare__label">Plan B: Dein eigenes Ding</span>
+        <p>Ein Online Business, simpel neben deinem Job aufgebaut. Basierend auf deinen Stärken, deinem Leben angepasst. Ganz ohne Technikfrust und unnötige Kompliziertheit. Bis <em>du</em> irgendwann selbst entscheidest, wie viel daraus in deinem Leben wird.</p>
       </div>
     </div>
+    <p class="compare__aug" data-reveal>Und noch etwas verändert sich, lange bevor dein Plan B Geld bringt: <strong>Wer eine zweite Option hat, sitzt anders im Gespräch. Nicht als Bittstellerin, sondern auf Augenhöhe.</strong></p>
     <p class="compare__footnote" data-reveal>
-      Das Ziel ist nicht deine Kündigung. Das Ziel ist deine Wahlfreiheit.
+      Das Ziel ist nicht deine Kündigung. Das Ziel ist deine Freiheit, die Wahl zu haben!
     </p>
   </section>
 
-  <!-- DER WEG / 3 SÄULEN -->
+  <!-- ZWISCHENBAND -->
+  <section class="spband" data-devo aria-label="Was ein Plan B verändert">
+    <div class="spband__in">
+      <p class="spband__say">
+        <span class="spband__ln">Wir können dir nicht versprechen, dass mit einem Plan B plötzlich alles perfekt ist.</span>
+        <span class="spband__gold">Aber je stärker deine zweite Option wird, desto weniger hängt dein ganzes Leben an einer einzigen.</span>
+      </p>
+      <p class="spband__steps">Mehr Plan B = Mehr Spielraum = Mehr Freiheit</p>
+    </div>
+  </section>
+
+  <!-- DER WEG -->
   <section class="section pillars" id="weg">
-    <p class="eyebrow" data-reveal-text>Der Weg</p>
-    <h2 data-reveal-text>So wird aus deinen Stärken dein Plan B.</h2>
-    <div class="pillars__grid">
-      <article class="pillar" data-reveal>
-        <span class="pillar__num">01</span>
-        <h3>Plan A verstehen</h3>
-        <p>Warum ein scheinbar sicherer Job keine echte Sicherheit ist – und wo Wahlfreiheit anfängt. Direkt aus 25 Jahren HR-Praxis.</p>
-      </article>
-      <article class="pillar" data-reveal>
-        <span class="pillar__num">02</span>
-        <h3>Plan B finden &amp; aufbauen</h3>
-        <p>Du brauchst keine fertige Idee. Gemeinsam finden wir, was zu deinem Alltag passt und wofür Menschen gern bezahlen – und bauen es in einfachen Schritten auf.</p>
-      </article>
-      <article class="pillar" data-reveal>
-        <span class="pillar__num">03</span>
-        <h3>Die Frau werden, die losgeht</h3>
-        <p>Weniger zerdenken, nicht auf perfekt warten. Wir geben dir Klarheit über den nächsten Schritt und den Push, weiterzugehen, wenn die Zweifel kommen.</p>
-      </article>
+    <div class="pillars__inner">
+      <p class="eyebrow" data-reveal-text>Unsere Philosophie</p>
+      <h2 data-reveal-text>Businessaufbau so simpel und entspannt, wie es nur geht.</h2>
+      <p class="philo__not" data-reveal>Wir verkaufen dir keine Flucht.<br><strong>Wir bauen mit dir deine passende Strategie.</strong></p>
+      <div class="philo" data-reveal>
+        <p>Keine 0815-Schablone, die alle bekommen. <strong>Erst dein Leben, dann der Plan.</strong> Und immer ein klarer nächster Schritt statt einer Liste mit hundert.</p>
+        <p class="philo__ask">Weißt du wie?</p>
+      </div>
+      <div class="pillars__grid">
+        <article class="pillar" data-reveal>
+          <span class="pillar__num">01</span>
+          <h3>Deine Idee finden</h3>
+          <p>Du brauchst keine fertige Idee. Wir schauen erst auf dich: auf das, was du kannst und was dir liegt. Daraus wird eine Idee, die zu deinem Alltag passt. Und wir prüfen, ob Menschen dafür zahlen würden. Vorher, nicht hinterher.</p>
+        </article>
+        <article class="pillar" data-reveal>
+          <span class="pillar__num">02</span>
+          <h3>Dein Business aufbauen</h3>
+          <p>Schritt für Schritt, so simpel wie möglich. Du musst dich mit KI nicht auskennen. Wir zeigen dir, wo sie dir wirklich Arbeit abnimmt und wo sie nichts zu suchen hat. Denn dein Business soll nach dir klingen, nicht nach allen anderen. Unsere Erfahrung plus unser KI-Wissen: Das ist die Abkürzung, die die meisten nicht kennen.</p>
+        </article>
+        <article class="pillar" data-reveal>
+          <span class="pillar__num">03</span>
+          <h3>Die Frau werden, die losgeht</h3>
+          <p>Nicht auf perfekt warten, nicht auf den richtigen Moment. Wir geben dir Klarheit über den nächsten Schritt und den Push, weiterzugehen, wenn die Zweifel kommen.</p>
+        </article>
+      </div>
+      <p class="pillars__end" data-reveal>Am Ende hast du nicht nur ein Business.<br><strong>Du traust dir auch zu, es zu führen.</strong></p>
     </div>
   </section>
 
@@ -161,10 +310,11 @@
         <p class="eyebrow eyebrow--light" data-reveal-text>Für wen das hier ist</p>
         <h3>Du bist hier richtig, wenn …</h3>
         <ul class="check-list check-list--yes">
-          <li><strong>… du ambitioniert bist</strong> und im Leben mehr willst als Stillstand.</li>
-          <li><strong>… du etwas Eigenes willst</strong> – auch wenn du heute noch keine Idee hast.</li>
+          <li><strong>… du ambitioniert bist</strong> und im Leben mehr willst, als nur zu funktionieren.</li>
+          <li><strong>… du etwas Eigenes aufbauen willst,</strong> auch wenn du heute noch keine Idee hast.</li>
           <li><strong>… du deinen Job behalten</strong> und trotzdem Schritt für Schritt unabhängiger werden willst.</li>
           <li><strong>… dein Business sich leicht anfühlen soll,</strong> weil es auf deinen echten Stärken aufbaut.</li>
+          <li><strong>… du wachsen willst, ohne dich wieder selbst auszubeuten.</strong> Du hast das schon in deiner Anstellung gemacht. Einmal reicht.</li>
         </ul>
       </div>
       <div data-reveal>
@@ -172,8 +322,9 @@
         <h3>Eher nichts für dich, wenn …</h3>
         <ul class="check-list check-list--no">
           <li><strong>… du auf schnelles Geld hoffst.</strong> Plan B ist ein Aufbau, kein Lottoschein.</li>
-          <li><strong>… du morgen kündigen willst.</strong> Bei uns bleibt Plan A, bis Plan B trägt.</li>
-          <li><strong>… jemand anderes es für dich machen soll.</strong> Wir gehen den Weg mit dir – gehen musst du ihn selbst.</li>
+          <li><strong>… du morgen überstürzt kündigen willst.</strong> Bei uns bleibt Plan A, bis dein Plan B genug Geld bringt.</li>
+          <li><strong>… jemand anderes alles für dich machen soll.</strong> Wir gehen den Weg mit dir. Loslaufen musst du selbst!</li>
+          <li><strong>… du eine Garantie brauchst, bevor du anfängst.</strong> Die hat dir dein Arbeitsvertrag auch nie gegeben.</li>
         </ul>
       </div>
     </div>
@@ -183,55 +334,46 @@
   <section class="section realitycheck" id="realitaet">
     <div class="realitycheck__inner">
       <p class="eyebrow eyebrow--light" data-reveal-text>Zeit für die Wahrheit</p>
-      <h2 class="realitycheck__statement" data-reveal-text>
-        Vielleicht fehlt dir gar kein Wissen mehr. Vielleicht fehlt dir eine Entscheidung.
-      </h2>
+      <h2 class="realitycheck__statement" data-reveal-text>Vielleicht fehlt dir gar kein Wissen mehr.<br>Vielleicht fehlt dir eine Entscheidung.</h2>
       <div class="realitycheck__text" data-reveal>
-        <p>Noch ein Reel speichern, noch einen Podcast hören, noch ein Freebie laden – und am Ende <strong>mehr Wissen im Kopf, aber immer noch kein Plan B</strong>.</p>
-        <p>Wir kennen das. Auch wir haben uns jahrelang weitergebildet, gezweifelt und im Kreis gedreht. Bis wir verstanden haben: <strong>Irgendwann musst du aufhören, dich vorzubereiten – und anfangen, aufzubauen.</strong></p>
-        <p class="realitycheck__punchline">Aufschieben ist auch eine Entscheidung.<br>Nur leider für Plan A.</p>
+        <p>Noch ein Reel speichern, noch einen Podcast hören, noch ein Freebie laden und am Ende <strong>mehr Wissen im Kopf, aber immer noch keinen Plan B</strong>.</p>
+        <p>Wir kennen das. Auch wir haben uns jahrelang weitergebildet und im Kreis gedreht, bis wir irgendwann dachten: <strong>Vielleicht sind einfach wir das Problem!</strong> Waren wir nicht.</p>
+        <p class="realitycheck__insight" data-reveal>Uns hat nur nie jemand gesagt, was für uns der nächste logische Schritt ist.</p>
+        <p class="realitycheck__cost" data-reveal>
+          <span class="realitycheck__costnum">50.000 €</span>
+          <span class="realitycheck__costlab">sind bei uns in Coachings und Kurse geflossen, bevor wir das verstanden haben. <strong>Diese Rechnung musst du nicht auch bezahlen.</strong></span>
+        </p>
+        <p class="realitycheck__small">Aufschieben ist auch eine Entscheidung.<br>Nur leider für Plan A.</p>
+        <p class="realitycheck__punchline">Weniger zerdenken.<br>Weniger verkomplizieren.<br><strong>Mehr machen.</strong></p>
       </div>
     </div>
   </section>
 
-  <!-- STIMMEN (Platzhalter) -->
-  <section class="section voices" id="stimmen">
-    <p class="eyebrow" data-reveal-text>Aus dem Plan B Club</p>
-    <h2 data-reveal-text>Frauen, die schon losgegangen sind.</h2>
-    <div class="voices__grid">
-      <figure class="voice" data-reveal>
-        <blockquote>„Platzhalter: Hier kommt ein echtes Zitat hin – zum Beispiel, was sich nach dem Beitritt verändert hat.“</blockquote>
-        <figcaption><span class="voice__avatar" aria-hidden="true">A</span><span><strong>Vorname N.</strong><br>Job · Plan B-Idee</span></figcaption>
-      </figure>
-      <figure class="voice" data-reveal>
-        <blockquote>„Platzhalter: Ein Satz darüber, welcher Aha-Moment im Club den Knoten gelöst hat.“</blockquote>
-        <figcaption><span class="voice__avatar" aria-hidden="true">B</span><span><strong>Vorname N.</strong><br>Job · Plan B-Idee</span></figcaption>
-      </figure>
-      <figure class="voice" data-reveal>
-        <blockquote>„Platzhalter: Ein konkretes Ergebnis, etwa die erste Kundin oder die gefundene Businessidee.“</blockquote>
-        <figcaption><span class="voice__avatar" aria-hidden="true">C</span><span><strong>Vorname N.</strong><br>Job · Plan B-Idee</span></figcaption>
-      </figure>
+  <!-- ZAHLEN-BAND -->
+  <section class="devo" data-devo aria-label="Wer hinter Frauen mit Plan B steht">
+    <div class="devo__in">
+      <p class="devo__say">
+        <span class="devo__gold"><span class="devo__two" aria-hidden="true">2</span><span class="devo__f">&nbsp;Frauen,</span></span><br>
+        <span class="devo__ln">die genau wissen,</span><br>
+        <span class="devo__ln">wie sich der Punkt anfühlt,</span><br>
+        <span class="devo__ln">an dem du gerade stehst.</span>
+      </p>
     </div>
   </section>
 
-  <!-- ÜBER UNS TEASER -->
+  <!-- ÜBER UNS -->
   <section class="section about" id="ueber-uns">
     <div class="about__grid">
       <div class="about__media" data-parallax="0.1">
-        <img src="assets/images/kontakt-dreiergespraech.jpg" alt="Julia und Stephie im Gespräch mit einer Kundin" class="media-frame" style="width:100%; height:100%; object-fit:cover; object-position: center 25%;" loading="lazy" data-reveal>
+        <img src="assets/images/kontakt-dreiergespraech.jpg" alt="Julia und Stephanie arbeiten gemeinsam am Laptop" class="media-frame" style="width:100%; height:100%; object-fit:cover; object-position: center 25%;" loading="lazy" data-reveal>
       </div>
       <div class="about__text" data-reveal>
         <p class="eyebrow" data-reveal-text>Über uns</p>
         <h2 data-reveal-text>Bevor wir „Frauen mit Plan B“ waren, hatten wir selbst nur Plan A.</h2>
-        <p>Zusammen über <strong>25 Jahre als Chefinnen im Personalwesen</strong>. Von außen das perfekte Drehbuch – für uns irgendwann nicht mehr genug.</p>
-        <p>Also haben wir neben unseren Jobs etwas Eigenes aufgebaut: eine Marketingagentur, echte Kunden, viele Umwege. Daraus ist Frauen mit Plan B entstanden.</p>
-        <p><strong class="text-accent">Im Sommer 2026 haben wir unsere „sicheren“ Vollzeitjobs gekündigt.</strong></p>
-        <p>Heute geben wir dir weiter, was wir am Anfang gebraucht hätten: Klarheit, einen einfachen nächsten Schritt und den Mut, ihn zu gehen.</p>
-        <div class="about__facts">
-          <span><strong>25+ gemeinsame Jahre</strong> HR &amp; Führung</span>
-          <span><strong>9+ gemeinsame Jahre</strong> Marketing &amp; Personal Branding</span>
-          <span><strong>Eigene Agentur</strong> Madame MKTG</span>
-        </div>
+        <p>Zusammen über <strong>25 Jahre als Chefinnen im Personalwesen</strong>. Für andere das perfekte Anstellungsverhältnis. Für uns aber irgendwann nicht mehr genug.</p>
+        <p>Also haben wir neben unseren Jobs etwas Eigenes aufgebaut: zuerst eine Marketingagentur. Echte Kunden, viele Umwege. Daraus ist dann Frauen mit Plan B entstanden.</p>
+        <p><strong class="text-accent">Im Sommer 2026 haben wir unsere „sicheren“ Vollzeitjobs gekündigt!</strong></p>
+        <p>Heute geben wir dir weiter, was wir am Anfang gebraucht hätten: absolute Klarheit, einen einfachen nächsten Schritt und den Mut, ihn zu gehen.</p>
         <a href="julia-und-stephie.html" class="link-underline link-underline--sand" data-magnetic>Julia &amp; Stephie kennenlernen →</a>
       </div>
     </div>
@@ -242,17 +384,18 @@
     <p class="eyebrow eyebrow--light" data-reveal-text>Bereit?</p>
     <h2 class="cta__headline" data-reveal-text>Dein Leben. Deine Ziele.<br><em>Dein Plan B.</em></h2>
     <p class="cta__sub" data-reveal>Du musst heute noch nicht wissen, wie dein Plan B aussieht.<br><strong>Du musst nur entscheiden, dass Plan A nicht deine einzige Option bleibt.</strong></p>
+    <p class="cta__self" data-reveal>Ein selbstbestimmtes Leben fängt nicht mit der Kündigung an.<br><strong>Es fängt damit an, dass du mehr als eine Option hast.</strong></p>
     <div class="club-box" data-reveal>
       <p class="club-box__title">Das bekommst du im Plan B Club</p>
       <ul>
-        <li>Deep Dives und Business-Know-how</li>
-        <li>Echte Erfahrungen – auch die Umwege</li>
+        <li>Deep Dives und Schritt-für-Schritt-Anleitungen</li>
+        <li>Unsere Fehler, damit du sie nicht auch machst</li>
         <li>Den Push, endlich ins Machen zu kommen</li>
       </ul>
       <p class="club-box__meta">Auf WhatsApp · 0 € · jederzeit austretbar</p>
     </div>
     <div class="cta-single" data-reveal>
-      <a href="https://chat.whatsapp.com/IW5fSFVLf0m64qhpKW02oG?s=cl&amp;p=i&amp;mlu=0&amp;ilr=4" class="btn btn--light" target="_blank" rel="noopener noreferrer" data-magnetic>Plan B Club kostenlos beitreten</a>
+      <a class="btn btn--light" data-magnetic data-club-open role="button" tabindex="0">Plan B Club kostenlos beitreten</a>
       <a href="plan-b-post.html" class="cta__alt">Oder erst mal die Plan B Post lesen</a>
     </div>
   </section>
@@ -276,7 +419,7 @@
   <div class="site-footer__bottom">
     <span>&copy; <span id="year"></span> Frauen mit Plan B</span>
     <div class="site-footer__legal">
-      <a href="mailto:support@frauenmitplanb.de">Kontaktiere uns</a>
+      <a href="mailto:support@frauenmitplanb.de" class="site-footer__mail">support@frauenmitplanb.de</a>
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
     </div>
@@ -287,16 +430,44 @@
   <div class="promo-modal__backdrop" data-promo-dismiss></div>
   <div class="promo-modal__card">
     <button type="button" class="promo-modal__close" id="promo-modal-close" aria-label="Schließen">✕</button>
-    <span class="promo-modal__icon" aria-hidden="true">
-      <svg viewBox="0 0 32 32"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.386.7 4.607 1.907 6.47L4 29l7.723-1.867A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 21.8c-1.94 0-3.76-.52-5.33-1.43l-.38-.22-4.58 1.11 1.14-4.46-.25-.4A9.77 9.77 0 0 1 5.2 15c0-5.96 4.84-10.8 10.8-10.8S26.8 9.04 26.8 15 21.96 24.8 16 24.8zm5.94-8.1c-.32-.16-1.9-.94-2.2-1.04-.3-.11-.52-.16-.73.16-.22.32-.84 1.04-1.03 1.25-.19.22-.38.24-.7.08-.32-.16-1.34-.49-2.55-1.57-.94-.84-1.58-1.87-1.76-2.19-.18-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.22.05-.4-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37z"/></svg>
-    </span>
-    <h3 class="promo-modal__title">Du willst mehr als nur Plan A?</h3>
-    <p class="promo-modal__text">Du brauchst nicht noch mehr Informationen. Du brauchst Klarheit darüber, was dein nächster sinnvoller Schritt ist!</p>
-    <p class="promo-modal__text">Genau dafür gibt's unseren kostenlosen Plan B Club auf WhatsApp: Deep Dives, echte Erfahrungen, Business-Know-how und den nötigen Push, endlich ins Machen zu kommen.</p>
-    <a href="https://chat.whatsapp.com/IW5fSFVLf0m64qhpKW02oG?s=cl&amp;p=i&amp;mlu=0&amp;ilr=4" class="btn btn--whatsapp promo-modal__btn" target="_blank" rel="noopener noreferrer" data-magnetic>Join the Plan B Club</a>
-    <p class="promo-modal__footnote">Kostet dich 0 €. Kann aber verdammt viel ins Rollen bringen. 🙂</p>
+    <figure class="promo-modal__pic">
+      <img src="assets/images/kontakt-gespraech.jpg" alt="Julia und Stephanie von Frauen mit Plan B" loading="lazy">
+    </figure>
+    <div class="promo-modal__body">
+      <span class="promo-modal__icon" aria-hidden="true">
+        <svg viewBox="0 0 32 32"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.386.7 4.607 1.907 6.47L4 29l7.723-1.867A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 21.8c-1.94 0-3.76-.52-5.33-1.43l-.38-.22-4.58 1.11 1.14-4.46-.25-.4A9.77 9.77 0 0 1 5.2 15c0-5.96 4.84-10.8 10.8-10.8S26.8 9.04 26.8 15 21.96 24.8 16 24.8zm5.94-8.1c-.32-.16-1.9-.94-2.2-1.04-.3-.11-.52-.16-.73.16-.22.32-.84 1.04-1.03 1.25-.19.22-.38.24-.7.08-.32-.16-1.34-.49-2.55-1.57-.94-.84-1.58-1.87-1.76-2.19-.18-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.22.05-.4-.03-.57-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.71s1.17 3.14 1.33 3.36c.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37z"/></svg>
+      </span>
+      <h3 class="promo-modal__title">Du willst mehr als nur <span class="promo-modal__pa"><b>Plan A</b><span class="promo-modal__nst">(nstellung)</span>?</span></h3>
+      <p class="promo-modal__text">Du brauchst nicht noch mehr Informationen. Du brauchst Klarheit darüber, was dein nächster sinnvoller Schritt ist!</p>
+      <p class="promo-modal__text">Genau dafür gibt's unseren kostenlosen Plan B Club auf WhatsApp: Deep Dives, echte Erfahrungen und <b>komplette Schritt-für-Schritt-Anleitungen,</b> wie du dir etwas Eigenes aufbaust. Plus den nötigen Push, endlich ins Machen zu kommen.</p>
+      <a href="https://chat.whatsapp.com/IW5fSFVLf0m64qhpKW02oG?s=cl&amp;p=i&amp;mlu=0&amp;ilr=4" class="btn btn--whatsapp promo-modal__btn" target="_blank" rel="noopener noreferrer" data-magnetic>Join the Plan B Club</a>
+      <p class="promo-modal__footnote">Kostet dich 0 €. Kann aber verdammt viel ins Rollen bringen. 🙂</p>
+    </div>
   </div>
 </div>
+
+<div class="promo-modal club-modal" id="club-modal" role="dialog" aria-modal="true" aria-labelledby="club-modal-title">
+  <div class="promo-modal__backdrop" data-club-dismiss></div>
+  <div class="promo-modal__card">
+    <button type="button" class="promo-modal__close" id="club-modal-close" aria-label="Schließen">✕</button>
+    <div class="promo-modal__body club-modal__body">
+      <span class="club-modal__eb">Kostenlos · auf WhatsApp</span>
+      <h3 class="promo-modal__title" id="club-modal-title">Das ist der <b>Plan B Club</b></h3>
+      <p class="promo-modal__text">Unsere Community für Frauen, die sich neben dem Job etwas Eigenes aufbauen wollen. Kein Kurs, kein Verkaufskanal. Eine Gruppe, in der wir regelmäßig das teilen, was wir am Anfang selbst gebraucht hätten.</p>
+      <ul class="club-modal__list">
+        <li>Deep Dives zu Idee, Aufbau und Sichtbarkeit</li>
+        <li>Komplette Schritt-für-Schritt-Anleitungen</li>
+        <li>Unsere Fehler aus dem eigenen Aufbau, damit du sie nicht auch machst</li>
+        <li>Den Push, wenn du feststeckst</li>
+      </ul>
+      <p class="club-modal__meta">0 € · kein Abo · jederzeit austretbar</p>
+      <a href="https://chat.whatsapp.com/IW5fSFVLf0m64qhpKW02oG?s=cl&amp;p=i&amp;mlu=0&amp;ilr=4" class="btn btn--whatsapp promo-modal__btn" target="_blank" rel="noopener noreferrer">Ja, ich bin dabei</a>
+      <p class="promo-modal__footnote">Der Button öffnet WhatsApp.</p>
+      <a href="plan-b-post.html" class="club-modal__alt">Lieber erst mal lesen? Plan B Post abonnieren</a>
+    </div>
+  </div>
+</div>
+
 <div class="cookie-banner" id="cookie-banner">
   <h3>Kekse? 🍪</h3>
   <p>Wir nutzen Cookies und Tools (z. B. für Formulare und Reichweiten-Messung), um dir die beste Erfahrung zu bieten. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>

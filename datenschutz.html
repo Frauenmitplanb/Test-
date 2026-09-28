@@ -1,49 +1,102 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Datenschutzerklärung – Frauen mit Plan B</title>
-<link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutzerklärung | Frauen mit Plan B</title>
+<meta name="robots" content="noindex">
+<style>
+:root{--ink:#232722;--forest:#5D6E60;--sand:#DAB880;--gold:#9C7434;--cream:#F6F2EA;--paper:#FBF9F5;
+--serif:Georgia,"Times New Roman",serif;
+--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);
+  font-size:1rem;line-height:1.7;}
+.wrap{max-width:46rem;margin:0 auto;padding:clamp(2rem,6vw,4.5rem) 1.5rem 5rem;}
+a{color:var(--gold);}
+.back{display:inline-block;margin-bottom:2rem;font-weight:600;text-decoration:none;}
+.back:hover{text-decoration:underline;}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,4.5vw,2.8rem);
+  line-height:1.2;margin:0 0 .6rem;}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.25rem,2.6vw,1.6rem);
+  margin:2.4rem 0 .6rem;color:var(--forest);}
+p,li{color:rgba(35,39,34,.85);}
+.note{margin:0 0 2.5rem;padding:1.1rem 1.25rem;border-radius:12px;
+  border:1px solid rgba(156,116,52,.35);background:rgba(218,184,128,.14);
+  font-size:.93rem;line-height:1.6;}
+.note strong{color:var(--gold);}
+mark{background:rgba(218,184,128,.5);color:var(--ink);padding:0 .2em;border-radius:3px;}
+footer{margin-top:3.5rem;padding-top:1.5rem;border-top:1px solid rgba(35,39,34,.12);
+  font-size:.85rem;color:rgba(35,39,34,.6);}
+</style>
 </head>
 <body>
-<div class="demo-banner">🚧 DEMO – Test-Website zur Design-Vorschau.</div>
-<header class="site-header">
-  <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="Frauen mit Plan B" class="logo-img"></a>
-  <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="die-idee.html">Die Idee</a>
-    <a href="julia-und-stephie.html">Julia &amp; Stephie</a>
-  </nav>
-  <a href="plan-b-post.html" class="btn btn--small">Plan B Post</a>
-</header>
-<main class="section" style="max-width: 760px;">
-  <h1>Datenschutzerklärung</h1>
-  <p><strong>TODO – noch nicht vollständig.</strong> Diese Seite muss individuell auf Basis der final
-  eingesetzten Tools erstellt werden (DSGVO Art. 13). Bitte folgende Punkte klären, sobald feststeht:</p>
-  <ul>
-    <li>Hosting-Anbieter (EU-Hosting bevorzugt, sonst AVV/Drittstaaten-Hinweis nötig)</li>
-    <li>Analytics-Tool (falls eingesetzt, z. B. Plausible statt Google Analytics für einfachere DSGVO-Konformität)</li>
-    <li>Kontaktformular / Newsletter-Tool (z. B. Mailchimp, Brevo …)</li>
-    <li>Weitere eingebundene Dienste (Social-Media-Buttons, Buchungstools, Zahlungsanbieter, etc.)</li>
-    <li>Google Fonts: bewusst vermieden – Old Standard TT wird lokal gehostet, kein Remote-Tracking</li>
-  </ul>
-  <p>
-    Sobald diese Angaben vorliegen, lässt sich der Website-Check-Skill (<code>dsgvo-website-check</code>,
-    liegt im Repo unter <code>.claude/skills/</code>) nutzen, um Impressum, Datenschutzerklärung und
-    Cookie-Banner vollständig und rechtssicher zu prüfen und auszuformulieren.
-  </p>
-  <p><a href="index.html">← Zurück zur Startseite</a></p>
-</main>
-<div class="cookie-banner" id="cookie-banner">
-  <h3>Kekse? 🍪</h3>
-  <p>Wir nutzen Cookies und Tools (z. B. für Formulare und Reichweiten-Messung), um dir die beste Erfahrung zu bieten. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
-  <div class="cookie-banner__actions">
-    <button type="button" class="cookie-btn--necessary" id="cookie-necessary">Nur notwendige</button>
-    <button type="button" class="cookie-btn--all" id="cookie-all">Alle akzeptieren</button>
-  </div>
+<div class="wrap">
+<a class="back" href="index.html">&larr; Zurück zur Startseite</a>
+<h1>Datenschutzerklärung</h1>
+<p class="note"><strong>Hinweis.</strong> Die meisten Angaben unten spiegeln den aktuellen technischen Stand
+der Demo-Website wider. Die <mark>gelb markierten</mark> Stellen hängen von Entscheidungen ab, die vor dem
+Livegang noch final getroffen werden (Hosting, Auftragsverarbeitungsverträge). Bitte vor Veröffentlichung
+rechtlich prüfen lassen.</p>
+
+<h2>1. Verantwortliche Stelle</h2>
+<p>Stephanie Böttcher<br>
+Stephanie Böttcher - Frauen mit Plan B<br>
+Thronitzer Str. 61<br>
+04420 Markranstädt<br>
+E-Mail: <a href="mailto:support@frauenmitplanb.de">support@frauenmitplanb.de</a></p>
+
+<h2>2. Hosting</h2>
+<p>Diese Demo-Website wird aktuell über GitHub Pages (GitHub Inc., 88 Colin P. Kelly Jr. Street,
+San Francisco, CA 94107, USA) bereitgestellt. Der Hoster verarbeitet dabei Server-Logfiles
+(IP-Adresse, Datum und Uhrzeit, abgerufene Seite, Browsertyp, Betriebssystem). Rechtsgrundlage ist
+Art. 6 Abs. 1 lit. f DSGVO.
+<mark>[Vor dem Livegang bestätigen: Bleibt es bei GitHub Pages oder wechselt die Seite auf einen
+anderen Hoster? Auftragsverarbeitungsvertrag mit dem final genutzten Hoster abschließen.]</mark></p>
+
+<h2>3. Cookies und Einwilligung</h2>
+<p>Beim ersten Besuch fragen wir über ein Banner deine Einwilligung ab. Technisch notwendige
+Cookies (Speicherung deiner Cookie-Entscheidung) setzen wir auf Grundlage von § 25 Abs. 2 TDDDG.
+Alle weiteren Dienste – aktuell das Newsletter-Formular – laden erst, nachdem du im Banner
+„Alle akzeptieren“ gewählt oder das Formular selbst aktiv geöffnet hast (Art. 6 Abs. 1 lit. a DSGVO).
+Du kannst deine Einwilligung jederzeit widerrufen, indem du deine Browser-Cookies für diese Seite löschst.</p>
+
+<h2>4. Newsletter „Plan B Post“</h2>
+<p>Für den Versand nutzen wir Alfima als E-Mail-Dienstleister. Die Anmeldung erfolgt im
+Double-Opt-in-Verfahren: Nach dem Absenden des Formulars erhältst du eine E-Mail mit einem
+Bestätigungslink. Erst nach dem Klick darauf wirst du in den Verteiler aufgenommen. Gespeichert werden
+Vorname, E-Mail-Adresse sowie Datum und IP-Adresse der Anmeldung und der Bestätigung, um den Nachweis
+der Einwilligung führen zu können. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO. Du kannst dich
+jederzeit über den Abmeldelink in jeder E-Mail wieder abmelden.
+<mark>[Auftragsverarbeitungsvertrag mit Alfima abschließen und hier bestätigen.]</mark></p>
+
+<h2>5. Reichweitenmessung</h2>
+<p>Aktuell ist kein Analyse- oder Tracking-Tool auf dieser Website eingebunden.
+<mark>[Falls später ein Tool wie z. B. Plausible eingesetzt wird: Name, Anbieter, Zweck,
+Rechtsgrundlage, Speicherdauer und Widerspruchsmöglichkeit hier ergänzen.]</mark></p>
+
+<h2>6. WhatsApp-Community „Plan B Club“</h2>
+<p>Der Beitritt erfolgt freiwillig über einen Einladungslink zu WhatsApp. Anbieter ist
+WhatsApp Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland. Mit dem Beitritt
+wird deine Mobilfunknummer für andere Mitglieder der Community sichtbar. Es gelten zusätzlich die
+Datenschutzbestimmungen von WhatsApp.</p>
+
+<h2>7. Schriftarten und externe Inhalte</h2>
+<p>Die Schriftart „Old Standard TT“ ist lokal in die Seite eingebettet (Self-Hosting). Dabei werden
+keine Daten an Google Fonts oder andere Drittanbieter übertragen. Externe Skripte laden wir derzeit
+für Scroll-Animationen (GSAP, ScrollTrigger, Lenis) von cdnjs.cloudflare.com bzw. cdn.jsdelivr.net;
+dabei wird technisch deine IP-Adresse an den jeweiligen Anbieter übertragen.</p>
+
+<h2>8. Deine Rechte</h2>
+<p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
+Datenübertragbarkeit sowie das Recht, eine erteilte Einwilligung jederzeit zu widerrufen.
+Außerdem steht dir ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde zu. Da unser
+Unternehmenssitz in Sachsen liegt, ist das in der Regel der Sächsische Datenschutzbeauftragte
+(Landesbeauftragter für Datenschutz und Informationsfreiheit Sachsen).</p>
+
+<h2>9. Stand</h2>
+<p>September 2026</p>
+<footer>Frauen mit Plan B &middot; <a href="mailto:support@frauenmitplanb.de">support@frauenmitplanb.de</a></footer>
 </div>
-<script src="js/main.js"></script>
 </body>
 </html>
