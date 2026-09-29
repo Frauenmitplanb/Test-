@@ -2263,3 +2263,41 @@ h1, h2, h3, .heroA__h1, .cta__headline, .big-quote, .manifesto__statement,
   .nl-inhalt__grid { max-width: 900px; }
   .nl-hero__lead { max-width: 40rem; }
 }
+
+/* 404-Seite */
+.error404 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(3rem,8vw,6rem) 1.5rem;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(118% 78% at 50% -14%, rgba(222,188,132,.30), rgba(222,188,132,.07) 46%, transparent 72%),
+    radial-gradient(86% 70% at 104% 100%, rgba(124,152,128,.55), transparent 62%),
+    radial-gradient(70% 56% at -4% 22%, rgba(222,188,132,.16), transparent 58%),
+    linear-gradient(190deg,#2F3E2F 0%,#283428 48%,#212B22 100%);
+}
+.error404__inner { max-width: 32rem; }
+.error404__num {
+  font-family: var(--font-headline); font-style: italic; font-weight: 400;
+  font-size: clamp(4.5rem,15vw,8rem); line-height: 1; color: var(--color-sand);
+  margin: 0 0 0.5rem;
+}
+.error404__eyebrow { color: rgba(251,249,245,.65) !important; }
+.error404 h1 { color: var(--color-paper); }
+.error404__lead {
+  font-size: 1.05rem; line-height: 1.7; color: rgba(251,249,245,.85);
+  max-width: 30rem; margin: 1.1rem auto 2.2rem;
+}
+.error404__actions { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; justify-content: center; margin-bottom: 1.75rem; }
+.error404__links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: center; font-size: 0.92rem; }
+.error404__links a {
+  color: rgba(251,249,245,.72); text-decoration: underline;
+  text-underline-offset: 3px; text-decoration-color: rgba(218,184,128,.5);
+}
+.error404__links a:hover { color: var(--color-sand); }
+@media (max-width: 520px) { .error404__actions { flex-direction: column; align-items: stretch; } }
