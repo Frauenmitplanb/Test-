@@ -98,8 +98,8 @@
 
     box.classList.add("is-pending");
 
-    var STEP = 1000;
-    var FADE = 320;
+    var STEP = 600;
+    var FADE = 200;
     var started = false;
 
     function decoded(im) {
