@@ -306,7 +306,7 @@
   setFx(".team-together__closing", "pop");
   /* Plan B Post */
   setFx(".pbcard", "grow");
-  setFx("form, .nl-form", "pop");
+  setFx(".nl-embed-wrap, .nl-form", "pop");
   setFx(".nl-hero__lead", "fade");
   setFx(".nl-from", "calm");
   setFx(".nl-list li", "inleft", 0.10);
@@ -592,22 +592,6 @@
     m.querySelectorAll("[data-club-dismiss]").forEach(function (el) { el.addEventListener("click", close); });
     m.querySelectorAll("a").forEach(function (el) { el.addEventListener("click", close); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
-  })();
-
-  /* ---------- Newsletter-Demoformular (Plan B Post, Platzhalter ohne Alfima-Iframe) ---------- */
-  (function () {
-    var f = document.getElementById("nlForm");
-    if (!f) return;
-    f.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var err = document.getElementById("nlError");
-      if (!f.vorname.value.trim()) { err.textContent = "Bitte gib deinen Vornamen ein."; f.vorname.focus(); return; }
-      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email.value.trim())) { err.textContent = "Bitte gib eine gültige E-Mail-Adresse ein."; f.email.focus(); return; }
-      if (!f.consent.checked) { err.textContent = "Bitte bestätige, dass du die Plan B Post erhalten möchtest."; return; }
-      err.textContent = "";
-      f.hidden = true;
-      document.getElementById("nlSuccess").hidden = false;
-    });
   })();
 
   /* ---------- Mobile nav toggle ---------- */

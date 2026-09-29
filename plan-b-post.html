@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<div class="demo-banner">🚧 DEMO – Design-Vorschau. Das Formular ist noch nicht mit einem echten Postfach verbunden.</div>
+<div class="demo-banner">🚧 DEMO – Test-Website zur Design-Vorschau. Inhalte, Texte &amp; Bilder sind teils Platzhalter.</div>
 
 <div class="preloader" id="preloader"><span class="preloader__word">Frauen mit Plan B</span></div>
 <div class="cursor-b" id="cursor-b" aria-hidden="true">B</div>
@@ -51,18 +51,12 @@
           <p class="nl-form-card__title">Plan B Post abonnieren</p>
           <p class="nl-form-card__sub">Direkt in dein Postfach. Kostenlos, jederzeit abbestellbar.</p>
         </div>
-        <form id="nlForm" novalidate>
-          <label>Vorname<input type="text" name="vorname" autocomplete="given-name" required></label>
-          <label>E-Mail-Adresse<input type="email" name="email" autocomplete="email" required></label>
-          <label class="nl-consent"><input type="checkbox" name="consent" required><span>Ja, ich möchte die Plan B Post erhalten. Abmelden geht jederzeit mit einem Klick. Mehr in der <a href="datenschutz.html">Datenschutzerklärung</a>.</span></label>
-          <p class="nl-error" id="nlError" role="alert"></p>
-          <button type="submit" class="btn btn--light nl-submit">Plan B Post abonnieren</button>
+        <div class="nl-embed-wrap">
+          <div class="nl-embed" id="alfima-embed" data-embed-src="https://alfima.com/frauenmitplanb/leads/plan-b-post/embed">
+            <button type="button" id="alfima-embed-load" class="btn btn--light nl-submit">Formular laden</button>
+            <p class="nl-embed__hint">Beim Laden verbindet sich dein Browser mit den Servern von Alfima. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+          </div>
           <p class="nl-facts"><span>Kostenlos</span><span>Regelmäßig</span><span>Jederzeit abbestellbar</span></p>
-        </form>
-        <div class="nl-success" id="nlSuccess" hidden>
-          <p class="nl-form-card__title">Fast geschafft!</p>
-          <p>Schau in dein Postfach und bestätige deine Anmeldung. Danach bist du dabei.</p>
-          <p class="nl-demo">Design-Vorschau: Dieses Formular ist noch nicht mit Alfima verbunden.</p>
         </div>
       </div>
     </div>
