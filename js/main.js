@@ -525,6 +525,8 @@
     var chips = [].slice.call(wrap.querySelectorAll(".rk__chip"));
     var eH = document.getElementById("rkH"), eD = document.getElementById("rkD"), eM = document.getElementById("rkM");
     var punch = document.getElementById("rkPunch");
+    var pD = document.getElementById("rkPunchD");
+    var pW = document.getElementById("rkPunchW");
     function count(el, to) {
       if (reduceMotion) { el.textContent = to; return; }
       var from = parseFloat(el.textContent) || 0, t0 = null, dur = 420;
@@ -540,8 +542,14 @@
       var h = 0;
       chips.forEach(function (c) { if (c.getAttribute("aria-pressed") === "true") h += parseFloat(c.dataset.h); });
       count(eH, h);
-      count(eD, Math.round(h * 52 / 8));
-      count(eM, Math.round(h * 52 * 10 / 8 / 30));
+      /* Gerechnet in Arbeitstagen: 8 Stunden = 1 Arbeitstag,
+         21,7 Arbeitstage = 1 Arbeitsmonat (Vollzeit). */
+      var jahr = h * 52;
+      var tage = Math.round(jahr / 8);
+      count(eD, tage);
+      count(eM, Math.round(jahr * 10 / 8 / 21.7));
+      if (pD) { count(pD, tage); }
+      if (pW) { pW.textContent = (tage === 1 ? "unbezahlter Arbeitstag" : "unbezahlte Arbeitstage"); }
       punch.classList.toggle("is-on", h > 0);
     }
     chips.forEach(function (c) {

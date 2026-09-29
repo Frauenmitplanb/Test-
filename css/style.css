@@ -1919,3 +1919,100 @@ html, body { overflow-x: clip; max-width: 100%; }
 .team__grid { grid-template-columns: repeat(2,minmax(0,1fr)) !important; }
 .team-card { min-width: 0; }
 @media (max-width: 720px) { .team__grid { grid-template-columns: minmax(0,1fr) !important; } }
+
+/* ==========================================================
+   Runde 4 — Einheitliche Schrift-Skala (gilt für alle Seiten)
+   Eine Größe pro Ebene, fließend mit der Bildschirmbreite.
+   ========================================================== */
+:root {
+  --fs-h1: clamp(1.75rem, 9.3vw, 4.6rem);
+  --fs-h2: clamp(1.3rem, 6.2vw, 2.7rem);
+  --fs-h3: clamp(1.1rem, 2.6vw, 1.3rem);
+  --fs-body: clamp(1rem, 1.6vw, 1.05rem);
+  --fs-small: 0.8125rem;
+  --fs-label: 0.72rem;
+  --fs-heroLead: clamp(0.9rem, 2.4vw, 1rem);
+  --fs-statement: clamp(1.25rem, 3.2vw, 2rem);
+  --fs-mission: clamp(1.6rem, 3.4vw, 2.7rem);
+}
+h1 { font-size: var(--fs-h1) !important; line-height: 1.14; text-wrap: balance; }
+h2 { font-size: var(--fs-h2) !important; line-height: 1.2; text-wrap: balance; }
+h3 { font-size: var(--fs-h3) !important; line-height: 1.38; text-wrap: balance; }
+.cta__headline { font-size: calc(var(--fs-h2) * 0.8) !important; letter-spacing: 0.02em !important; text-wrap: pretty !important; }
+.manifesto__statement { font-size: calc(var(--fs-h2) * 0.98) !important; }
+@media (max-width: 420px) { .cta__headline { letter-spacing: 0.005em !important; } }
+@media (max-width: 340px) { .cta__headline { font-size: calc(var(--fs-h2) * 0.82) !important; } }
+
+/* Fließtext: eine Größe */
+p:not([class]), li:not([class]),
+.jetzt__lead, .warum__lead, .rk__lead, .nl-hero__lead, .manifesto__text,
+.idee-hero__text p:not([class]), .arbeit__text p:not([class]),
+.pain-list li, .check-list li, .nl-list li, .tl p, .pillar p,
+.compare__card p:not([class]), .about__text p:not([class]),
+.weg-story__inner > p:not([class]), .team-card > p:not([class]) {
+  font-size: var(--fs-body) !important; line-height: 1.7;
+}
+.heroA__h1, .idee-hero h1, .team-hero h1, .nl-hero h1, .club-hero h1, .hero h1, .section h1 { font-size: var(--fs-h1) !important; }
+.manifesto__statement, .cta__headline, .realitycheck__statement, .rechne h2, .warum h2, .weg h2, .fit h2, .about h2 { font-size: var(--fs-h2) !important; }
+
+/* Kleingedrucktes: eine Größe statt vier */
+.heroA__eye, .heroA__note, .fact__sub, .fact__cap, .fact__note, .jars__gap,
+.club-box__meta, .spband__steps, .rk__lab,
+.nl-form-card__sub, .nl-facts, .nl-note, .site-footer__legal {
+  font-size: var(--fs-small) !important;
+}
+.warum__src { font-size: 0.68rem !important; line-height: 1.55 !important; max-width: 52ch; margin-left: auto; margin-right: auto; opacity: 0.78; }
+
+/* Versal-Labels: eine Größe, Eyebrows eine Nuance größer */
+.fact__kicker, .jars__label, .whyband__label, .mission__label, .tasks__legend, .jetzt__name, .rk__chip i { font-size: var(--fs-label) !important; }
+.eyebrow, .eyebrow--light, .mission__label { font-size: clamp(0.8rem,1.1vw,0.88rem) !important; letter-spacing: 0.17em; }
+@media (max-width: 360px) { .eyebrow, .eyebrow--light, .mission__label { font-size: 0.76rem !important; letter-spacing: 0.14em; } }
+
+/* Hero-Lead-Texte auf allen Seiten gleich */
+.heroA__body, .idee-hero__text, .idee-hero__text p, .nl-hero__lead,
+.team-hero__text, .team-hero__text p, .club-hero__text {
+  font-size: var(--fs-heroLead) !important; line-height: 1.65 !important;
+}
+.heroA__eye .nowrap { white-space: nowrap; }
+.heroA__btn { font-size: 0.93rem !important; padding: 0.92rem 1.7rem !important; box-shadow: 0 10px 24px -10px rgba(35,39,34,0.55) !important; }
+.heroA__btn:hover { box-shadow: 0 14px 28px -12px rgba(35,39,34,0.6) !important; }
+@media (max-width: 520px) { .heroA__btn { font-size: 0.9rem !important; padding: 0.88rem 1.5rem !important; } }
+.heroA { padding-top: clamp(4.2rem,9vw,7.5rem) !important; padding-bottom: clamp(9rem,13vw,11rem) !important; }
+@media (max-width: 560px) { .heroA__in { margin-left: -8px; margin-right: -8px; } }
+
+/* Statement-Ebene: alle großen Aussagen auf derselben Stufe */
+.rk__punch, .rk__closeHead { font-size: var(--fs-statement) !important; line-height: 1.3 !important; }
+.rk__punch { text-wrap: normal !important; max-width: 44ch !important; color: #C4694F !important; margin: 2.2rem auto 0.2rem !important; }
+.rk__punch em { color: #C4694F !important; white-space: nowrap; }
+@media (min-width: 1200px) { .rk__punch { max-width: 50ch !important; } }
+@media (max-width: 360px) { .rk__punch, .rk__closeHead { font-size: 1.12rem !important; } }
+.rk__bill { margin: 1.1rem auto 0 !important; font-weight: 400 !important; }
+.rk__close span { font-size: var(--fs-body) !important; font-weight: 400 !important; }
+.manifesto__for { font-family: var(--font-body) !important; font-weight: 500 !important; font-size: var(--fs-statement) !important; letter-spacing: 0.035em !important; line-height: 1.3 !important; margin-top: 0.6em; }
+.manifesto__text--strong, .manifesto__mission { font-size: var(--fs-mission) !important; line-height: 1.28 !important; }
+.compare__aug strong { font-size: var(--fs-statement) !important; line-height: 1.3 !important; margin-top: 0.55em !important; }
+.compare__footnote { color: var(--color-forest) !important; font-size: var(--fs-mission) !important; line-height: 1.26 !important; max-width: 32ch; margin-left: auto; margin-right: auto; margin-top: clamp(1.7rem,3.2vw,2.6rem) !important; text-wrap: balance; }
+.realitycheck__small { font-size: clamp(1.5rem,3.7vw,2.1rem) !important; line-height: 1.3 !important; max-width: 24ch; }
+.spband__ln { display: block; font-family: var(--font-body) !important; font-size: var(--fs-body) !important; line-height: 1.7 !important; color: rgba(251,249,245,0.8) !important; max-width: 46ch; margin: 0 auto; }
+.spband__gold { display: block; font-family: var(--font-headline) !important; font-size: var(--fs-statement) !important; line-height: 1.3 !important; max-width: 34ch; margin: clamp(1rem,2.2vw,1.6rem) auto 0 !important; }
+.jetzt__name, .jetzt__name span { color: var(--color-ink) !important; }
+
+/* Rechner: Fußnoten-Sternchen und Ergebnis-Satz */
+.rk__numwrap { display: inline-flex; align-items: flex-start; justify-content: center; line-height: 1; }
+.rk__fn { color: #9C7434 !important; font-size: clamp(0.78rem,1.8vw,0.95rem) !important; line-height: 1; vertical-align: top; margin-left: 0.1em; position: relative; top: 0.15em; }
+.rk__fine--note { margin: 2.4rem auto 0 !important; max-width: 52ch; font-size: 0.68rem !important; line-height: 1.55 !important; color: rgba(35,39,34,0.45) !important; text-align: center; }
+.rk__fine--note span { color: #9C7434; font-weight: 700; }
+.rk__punchHit { display: block; font-family: var(--font-body) !important; font-weight: 700 !important; font-size: clamp(1.2rem,3.6vw,1.62rem) !important; line-height: 1.3 !important; letter-spacing: 0.005em; margin-bottom: 0.7em !important; text-wrap: balance !important; }
+.rk__punchYou { font-weight: 400; letter-spacing: 0.045em; }
+
+/* "So arbeiten wir" (Die Idee): Zitat jetzt eingerahmt */
+.arbeit__said { font-size: 1rem !important; line-height: 1.7; color: rgba(35,39,34,0.62); margin: 1.4rem 0 0.5rem !important; }
+.arbeit__against { font-size: 1rem !important; line-height: 1.7; margin: 0.6rem 0 0 !important; color: var(--color-ink); }
+.arbeit__against strong { font-family: var(--font-headline); font-weight: 400; font-style: italic; font-size: 1.12em; color: #9C7434; }
+
+/* #warum auf Desktop: dichter gepackt statt auf gleiche Höhe gedehnt */
+@media (min-width: 1000px) {
+  .warum__grid { display: block !important; column-count: 3; column-gap: 20px; }
+  .warum__grid > .fact { break-inside: avoid; -webkit-column-break-inside: avoid; page-break-inside: avoid; margin: 0 0 20px; width: 100%; }
+}
+@media (min-width: 1000px) and (max-width: 1180px) { .warum__grid { column-count: 2; } }
