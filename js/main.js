@@ -701,6 +701,62 @@
     });
   })();
 
+  /* ---------- Zeitstrahl (Die Idee): Linie füllt sich beim Scrollen ---------- */
+  (function () {
+    var tl = document.querySelector(".tl");
+    if (!tl) return;
+    var items = [].slice.call(tl.children);
+    if (!items.length) return;
+
+    if (reduceMotion) {
+      tl.style.setProperty("--tlp", 1);
+      items.forEach(function (li) { li.classList.add("is-done"); });
+      return;
+    }
+
+    var stops = [];
+    function measure() {
+      var vertical = items.length > 1 && items[1].offsetTop > items[0].offsetTop + 5;
+      stops = items.map(function (li) {
+        var t;
+        if (vertical) {
+          t = (li.offsetTop + 13) / Math.max(1, tl.offsetHeight);
+        } else {
+          var center = (li.offsetLeft + li.offsetWidth / 2) / Math.max(1, tl.offsetWidth);
+          t = (center - 0.08) / 0.84;
+        }
+        return Math.max(0, Math.min(1, t));
+      });
+      /* Ab dem letzten Punkt laeuft die Linie in Gold weiter. */
+      tl.style.setProperty("--tlend", (stops[stops.length - 1] * 100).toFixed(2) + "%");
+    }
+
+    var running = false;
+    function tick() {
+      running = false;
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      var r = tl.getBoundingClientRect();
+      var span = Math.max(r.height, vh * 0.7);
+      var p = (vh * 0.78 - r.top) / span;
+      p = p < 0 ? 0 : (p > 1 ? 1 : p);
+      tl.style.setProperty("--tlp", Math.min(p, stops[stops.length - 1]).toFixed(3));
+      for (var i = 0; i < items.length; i++) {
+        items[i].classList.toggle("is-done", p >= stops[i] - 0.015);
+      }
+    }
+    function onScroll() {
+      if (running) return;
+      running = true;
+      requestAnimationFrame(tick);
+    }
+
+    measure();
+    tl.style.setProperty("--tlp", 0);
+    tick();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", function () { measure(); onScroll(); });
+  })();
+
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();

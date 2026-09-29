@@ -2039,7 +2039,7 @@ p:not([class]), li:not([class]),
 .manifesto__for em { font-weight: 700; }
 .manifesto__mission { font-size: clamp(1.65rem,3.9vw,2.7rem) !important; }
 
-.cta {
+#cta {
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -2047,14 +2047,14 @@ p:not([class]), li:not([class]),
   background-size: cover !important;
   background-position: center 20% !important;
 }
-.cta::before {
+#cta::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
   background: linear-gradient(180deg,rgba(93,110,96,.88),rgba(74,88,76,.86));
 }
-.cta__sub { font-size: clamp(1rem,1.7vw,1.12rem); line-height: 1.65; }
+#cta .cta__sub { font-size: clamp(1rem,1.7vw,1.12rem); line-height: 1.65; }
 
 .realitycheck {
   isolation: isolate;
@@ -2146,3 +2146,120 @@ p:not([class]), li:not([class]),
 [data-fact].is-on .task.is-ai { background: rgba(218,184,128,.92); color: #232722; }
 .proof__num--word { line-height: 1.05; }
 .proof__label { font-weight: 700; }
+
+/* Runde 6 — 1:1 Abgleich Die Idee, Julia & Stephie, Plan B Post */
+
+/* -- Global/geteilte Infrastruktur -- */
+[hidden]:not([hidden=until-found i]) { display: none !important; }
+@media (max-width: 560px) {
+  .cookie-banner__actions { width: 100%; }
+  .cookie-banner__actions button { flex: 1 1 0 !important; }
+  .club-modal__body { padding: 1.9rem 1.3rem 1.5rem; }
+  .promo-modal__body { padding: 0 1.3rem 1.5rem; }
+}
+.section, .compare, .fit, .jetzt, .pillars, .team-bio, .team__grid, .idee-hero, .timeline, .glaube, .devo, .warum, .spielraum, .realitycheck, .about, .cta, .manifesto { overflow-x: clip; }
+.club-modal__body, .club-modal .promo-modal__body { padding: 2.1rem 1.75rem 1.75rem; }
+h1, h2, h3, .heroA__h1, .cta__headline, .big-quote, .manifesto__statement,
+.warum__ask, .spband__say, .pbband__say, .pillars__end, .rk__punch, .rk__close { text-wrap: balance; }
+.idee-hero h1, .team-hero h1, .nl-hero h1 { font-size: clamp(1.72rem,8.3vw,4.1rem) !important; }
+
+/* -- Die Idee -- */
+.mission { margin: 0 0 1.9rem; padding: 1.1rem 0 1.1rem 1.35rem; border-left: 3px solid var(--color-sand); max-width: 34rem; }
+.mission__label { margin: 0 0 0.5rem; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--color-forest); }
+.mission__text { margin: 0; font-family: var(--font-headline); font-size: clamp(1.25rem,2.3vw,1.7rem); line-height: 1.35; color: var(--color-ink); }
+.mission__text em { font-style: normal; color: #9C7434; }
+.mission__text strong { font-weight: 700; display: block; margin-top: 0.15em; color: var(--color-ink); }
+@media (max-width: 760px) { .mission { padding-left: 1rem; margin-bottom: 1.5rem; } }
+.arbeit__sub { font-weight: 700; font-size: var(--fs-body) !important; margin: 1rem 0 0; }
+.arbeit__said, .arbeit__against { font-size: var(--fs-body) !important; }
+.idee-hero__text p.idee-hero__quote { font-size: clamp(1.25rem,2.8vw,1.6rem) !important; line-height: 1.3 !important; margin: 0.7em 0 0.8em !important; }
+.weg-story__inner .brandname { font-family: var(--font-headline); font-style: italic; font-weight: 400; color: #9C7434; font-size: 1.06em; }
+.weg-story__inner .big-quote--ohshit { color: var(--color-forest) !important; }
+.pillar p strong { color: var(--color-paper); }
+@media (min-width: 1200px) {
+  .pillars h2 { max-width: 840px; }
+  .idee-hero__text { max-width: 40rem; }
+  .timeline h2 { max-width: 840px; }
+}
+@media (max-width: 900px) {
+  .idee-hero__grid { grid-template-columns: 1fr; }
+  .idee-hero__img { aspect-ratio: 4/3; border-radius: 10px 10px 80px 10px; }
+  .arbeit { grid-template-columns: 1fr; }
+}
+
+/* Die Idee: "Woran wir glauben" (glaube) Pillar-Karten hell statt dunkel */
+.glaube .pillar { background-image: linear-gradient(160deg,#F2E4C9 0%,#EBD8B4 100%) !important; border: 1px solid rgba(156,116,52,.28) !important; color: var(--color-ink) !important; box-shadow: 0 18px 38px -26px rgba(35,39,34,.35); }
+.glaube .pillar h3 { color: var(--color-ink) !important; }
+.glaube .pillar p { color: rgba(35,39,34,.78) !important; }
+.glaube .pillar p strong { color: var(--color-ink) !important; }
+.glaube .pillar__num { color: #2F3E2F !important; opacity: 0.85; }
+
+/* Die Idee: Zeitstrahl (.tl) füllt sich beim Scrollen, letzter Punkt pulsiert am Ziel */
+.tl::before { background: linear-gradient(90deg, rgba(93,110,96,.28) 0 var(--tlend,100%), var(--color-sand) var(--tlend,100%) 100%) !important; }
+.tl::after { content: ""; position: absolute; top: 11px; left: 8%; right: 8%; height: 2px; background: var(--color-forest); transform: scaleX(var(--tlp,0)); transform-origin: left center; transition: transform .14s linear; pointer-events: none; z-index: 0; }
+.tl li::before { transition: background .4s ease, border-color .4s ease, box-shadow .4s ease, transform .4s ease; z-index: 1; }
+.tl li.is-done::before { background: var(--color-forest); border-color: var(--color-forest); }
+.tl li:last-child::before { border-color: var(--color-forest); background: var(--color-paper); box-shadow: none; }
+.tl li:last-child.is-done::before { background: var(--color-sand); border-color: var(--color-sand); transform: scale(1.15); animation: tlPulse 1.7s ease-out 3; }
+@keyframes tlPulse {
+  0% { box-shadow: 0 0 0 0 rgba(218,184,128,.6); }
+  70% { box-shadow: 0 0 0 16px rgba(218,184,128,0); }
+  100% { box-shadow: 0 0 0 7px rgba(218,184,128,.28); }
+}
+@media (prefers-reduced-motion: reduce) { .tl li:last-child.is-done::before { animation: none; box-shadow: 0 0 0 7px rgba(218,184,128,.28); } }
+@media (max-width: 900px) {
+  .tl { grid-template-columns: 1fr; margin-top: 2rem; }
+  .tl::before { top: 0; bottom: 0; left: 9px; right: auto; width: 2px; height: auto; background: linear-gradient(180deg, rgba(93,110,96,.28) 0 var(--tlend,100%), var(--color-sand) var(--tlend,100%) 100%) !important; }
+  .tl::after { top: 0; bottom: 0; left: 9px; right: auto; width: 2px; height: auto; transform: scaleY(var(--tlp,0)); transform-origin: center top; }
+  .tl li { padding: 0 0 1.75rem 2.5rem; text-align: left; }
+  .tl li::before { top: 4px; left: 1px !important; margin-left: 0; }
+}
+
+/* -- Julia & Stephie -- */
+.team-together__closing { color: #9C7434 !important; }
+.team-together .duo-lines p, .team-together__closing { font-size: var(--fs-statement) !important; line-height: 1.32 !important; }
+.duo-lines { gap: 0.5rem; }
+.duo-lines p { font-family: var(--font-headline); font-size: clamp(1.2rem,2.2vw,1.55rem); }
+.duo b { font-weight: 400; font-family: var(--font-headline); font-size: 1.35rem; letter-spacing: normal; }
+.whyband__row i { line-height: 1; font-size: .42em !important; color: var(--color-sand) !important; position: relative; top: -.12em; }
+.plan-a__stack li { font-size: min(4.8vw, 2rem) !important; line-height: 1.35 !important; }
+@media (min-width: 1000px) { .plan-a__stack li { font-size: min(2.3vw, 2rem) !important; } }
+@media (min-width: 1200px) {
+  .team-together__inner { max-width: 880px; }
+  .team-hero h1 { max-width: 900px; }
+}
+@media (max-width: 900px) { .plan-a__inner { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .duo { grid-template-columns: 1fr; } }
+
+/* -- Plan B Post -- */
+.nl-form-card input[type=text], .nl-form-card input[type=email] { border-color: rgba(35,39,34,.14); }
+.nl-submit { -webkit-appearance: none; appearance: none; }
+.nl-list li::before { color: #9C7434; }
+.nl-list b { color: #9C7434; }
+.pbcard { cursor: pointer; transition: transform .3s ease, box-shadow .3s ease; }
+.pbcard:hover { transform: translateY(-3px); }
+.pbcard__cta {
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+  font-size: .95rem !important;
+  letter-spacing: .01em !important;
+  display: flex !important;
+  justify-content: center;
+  gap: .55em;
+  text-transform: none !important;
+  color: var(--color-ink) !important;
+  background: var(--color-sand) !important;
+  border-radius: 999px;
+  padding: .95rem 1.5rem !important;
+  margin-top: clamp(1.2rem,2.6vw,1.7rem) !important;
+  box-shadow: 0 12px 26px -14px rgba(0,0,0,.55);
+  transition: background .25s ease, box-shadow .25s ease;
+}
+.pbcard__cta i { transition: transform .25s ease; }
+.pbcard:hover .pbcard__cta i { transform: translateX(4px); }
+.pbcard:hover .pbcard__cta { background: #E8CD9C !important; box-shadow: 0 16px 30px -14px rgba(0,0,0,.6); }
+@media (max-width: 900px) { .nl-hero__grid, .nl-inhalt__grid, .club-mini__grid { grid-template-columns: 1fr; } }
+@media (min-width: 1200px) {
+  .nl-inhalt__grid { max-width: 900px; }
+  .nl-hero__lead { max-width: 40rem; }
+}
