@@ -1187,53 +1187,6 @@ p { margin: 0 0 1em; }
   border-top: 1px solid rgba(35,39,34,0.1);
 }
 
-/* ---------- Cookie banner ---------- */
-.cookie-banner {
-  position: fixed;
-  left: 1.25rem;
-  right: 1.25rem;
-  bottom: 1.25rem;
-  max-width: 420px;
-  margin: 0 auto;
-  background: var(--color-white);
-  border-radius: 18px;
-  padding: 1.5rem 1.5rem 1.35rem;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.22);
-  z-index: 800;
-  transform: translateY(140%);
-  opacity: 0;
-  transition: transform 0.5s var(--ease), opacity 0.5s ease;
-}
-.cookie-banner.is-visible { transform: translateY(0); opacity: 1; }
-.cookie-banner h3 {
-  font-family: var(--font-body);
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem;
-  text-transform: none;
-  letter-spacing: normal;
-}
-.cookie-banner p { font-size: 0.88rem; line-height: 1.55; color: rgba(35,39,34,0.72); margin: 0 0 1.15rem; }
-.cookie-banner p a { text-decoration: underline; font-weight: 600; }
-.cookie-banner__actions { display: flex; gap: 0.65rem; flex-wrap: wrap; }
-.cookie-banner__actions button {
-  flex: 1;
-  min-width: 130px;
-  padding: 0.7rem 1rem;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 0.82rem;
-  cursor: pointer;
-  border: none;
-  font-family: var(--font-body);
-  transition: background 0.25s ease, transform 0.25s var(--ease);
-}
-.cookie-btn--necessary { background: var(--color-paper); box-shadow: inset 0 0 0 1.5px rgba(35,39,34,0.25); color: var(--color-ink); }
-.cookie-btn--necessary:hover { background: var(--color-cream); }
-.cookie-btn--all { background: var(--color-forest); color: var(--color-paper); }
-.cookie-btn--all:hover { background: #4a584c; }
-@media (max-width: 480px) { .cookie-banner { left: 0.75rem; right: 0.75rem; bottom: 0.75rem; padding: 1.25rem; } }
-
 /* ---------- Promo modal (WhatsApp reminder) ---------- */
 .promo-modal {
   position: fixed;
@@ -1370,15 +1323,6 @@ p { margin: 0 0 1em; }
 .club-box li::before { content: "✓"; position: absolute; left: 0; color: var(--color-sand); font-weight: 700; }
 .club-box__meta { margin: 1rem 0 0; font-size: 0.85rem; color: rgba(251,249,245,0.75); }
 .cta-single { margin-top: 2rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
-
-/* Kompakter Cookie-Hinweis unten */
-.cookie-banner { left: 0 !important; right: 0 !important; bottom: 0 !important; max-width: none !important; border-radius: 0 !important; padding: 0.85rem clamp(1rem,4vw,2.5rem) calc(0.85rem + env(safe-area-inset-bottom, 0px)) !important;
-  display: flex; align-items: center; gap: 1rem 1.5rem; flex-wrap: wrap; box-shadow: 0 -8px 30px rgba(0,0,0,0.12) !important; }
-.cookie-banner h3 { display: none; }
-.cookie-banner p { margin: 0 !important; flex: 1 1 320px; font-size: 0.82rem !important; }
-.cookie-banner__actions { flex: 0 0 auto; }
-.cookie-banner__actions button { min-width: 0 !important; flex: 0 0 auto !important; padding: 0.6rem 1.1rem !important; }
-@media (max-width: 560px) { .cookie-banner__actions { width: 100%; } .cookie-banner__actions button { flex: 1 1 0 !important; } }
 
 /* ===== Unterseiten ===== */
 .idee-hero { max-width: none; padding: clamp(2.5rem,5vw,4.5rem) 1.5rem clamp(3rem,6vw,5rem); background: radial-gradient(60% 65% at 16% 10%, rgba(218,184,128,0.22), transparent 62%), radial-gradient(55% 60% at 88% 55%, rgba(93,110,96,0.16), transparent 62%), var(--color-cream); }
@@ -2152,8 +2096,6 @@ p:not([class]), li:not([class]),
 /* -- Global/geteilte Infrastruktur -- */
 [hidden]:not([hidden=until-found i]) { display: none !important; }
 @media (max-width: 560px) {
-  .cookie-banner__actions { width: 100%; }
-  .cookie-banner__actions button { flex: 1 1 0 !important; }
   .club-modal__body { padding: 1.9rem 1.3rem 1.5rem; }
   .promo-modal__body { padding: 0 1.3rem 1.5rem; }
 }

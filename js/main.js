@@ -394,11 +394,10 @@
     });
   }
 
-  /* ---------- Newsletter form: Alfima embed (loads only after consent) ---------- */
+  /* ---------- Newsletter form: Alfima embed (loads only on click) ---------- */
   (function () {
     var wrap = document.getElementById("alfima-embed");
     if (!wrap) return;
-    var CONSENT_KEY = "fmpb-cookie-consent";
     var src = wrap.getAttribute("data-embed-src");
     var loaded = false;
 
@@ -429,20 +428,9 @@
       });
     }
 
-    var consent = null;
-    try { consent = localStorage.getItem(CONSENT_KEY); } catch (e) {}
-    if (consent === "all") {
-      injectEmbed();
-    } else {
-      var loadBtn = document.getElementById("alfima-embed-load");
-      if (loadBtn) {
-        loadBtn.addEventListener("click", function () {
-          try { localStorage.setItem(CONSENT_KEY, "all"); } catch (e) {}
-          var banner = document.getElementById("cookie-banner");
-          if (banner) banner.classList.remove("is-visible");
-          injectEmbed();
-        });
-      }
+    var loadBtn = document.getElementById("alfima-embed-load");
+    if (loadBtn) {
+      loadBtn.addEventListener("click", injectEmbed);
     }
   })();
 
@@ -611,26 +599,6 @@
       });
     });
   });
-
-  /* ---------- Cookie banner ---------- */
-  (function () {
-    var banner = document.getElementById("cookie-banner");
-    if (!banner) return;
-    var STORAGE_KEY = "fmpb-cookie-consent";
-    var already = null;
-    try { already = localStorage.getItem(STORAGE_KEY); } catch (e) {}
-    if (!already) {
-      setTimeout(function () { banner.classList.add("is-visible"); }, 1200);
-    }
-    function setConsent(value) {
-      try { localStorage.setItem(STORAGE_KEY, value); } catch (e) {}
-      banner.classList.remove("is-visible");
-    }
-    var btnNecessary = document.getElementById("cookie-necessary");
-    var btnAll = document.getElementById("cookie-all");
-    if (btnNecessary) btnNecessary.addEventListener("click", function () { setConsent("necessary"); });
-    if (btnAll) btnAll.addEventListener("click", function () { setConsent("all"); });
-  })();
 
   /* ---------- Promo modal (WhatsApp reminder) ----------
      Homepage: nach 1:10 Minuten. Unterseiten: nach 1:15 Minuten.
