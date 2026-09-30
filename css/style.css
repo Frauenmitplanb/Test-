@@ -2307,3 +2307,5 @@ h1, h2, h3, .heroA__h1, .cta__headline, .big-quote, .manifesto__statement,
 .nl-embed { display: grid; gap: 0.9rem; }
 .nl-embed__hint { margin: 0; font-size: 0.78rem; line-height: 1.5; color: rgba(35,39,34,0.55); text-align: center; }
 .nl-embed__hint a { text-decoration: underline; }
+
+picture { display: contents; }
