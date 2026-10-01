@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preload" as="image" href="assets/images/hero-intro-1-900.webp" type="image/webp" media="(max-width: 700px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/images/hero-intro-1.webp" type="image/webp" media="(min-width: 701px)" fetchpriority="high">
 <script src="https://cloud.ccm19.de/app.js?apiKey=86477b68c4bd5388a9018f3f541a8e977b966ca008c1c298&amp;domain=6abceed7088e18dcf9067f93" referrerpolicy="origin"></script>
 <title>Nebenberuflich Online Business aufbauen | Frauen mit Plan B</title>
 <meta name="description" content="Für Frauen in Anstellung, die mehr wollen: Finde deine Businessidee und bau dir nebenberuflich ein eigenes Online Business auf. Simpel, ohne Bullshit.">
@@ -49,12 +51,14 @@
   <section class="hero heroA">
     <div class="heroA__bg" aria-hidden="true">
       <picture>
+        <source media="(max-width: 700px)" srcset="assets/images/hero-intro-1-900.webp" type="image/webp">
         <source srcset="assets/images/hero-intro-1.webp" type="image/webp">
-        <img class="heroA__img" src="assets/images/hero-intro-1.jpg" alt="" loading="eager" decoding="async">
+        <img class="heroA__img" src="assets/images/hero-intro-1.jpg" alt="" fetchpriority="high" decoding="async">
       </picture>
       <picture>
+        <source media="(max-width: 700px)" srcset="assets/images/hero-intro-2-900.webp" type="image/webp">
         <source srcset="assets/images/hero-intro-2.webp" type="image/webp">
-        <img class="heroA__img" src="assets/images/hero-intro-2.jpg" alt="" loading="eager" decoding="async">
+        <img class="heroA__img" src="assets/images/hero-intro-2.jpg" alt="" fetchpriority="high" decoding="async">
       </picture>
     </div>
     <div class="heroA__in">
