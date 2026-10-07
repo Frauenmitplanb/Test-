@@ -2087,7 +2087,6 @@ p:not([class]), li:not([class]),
 .compare__footnote { max-width: 26ch; }
 .fact { background: rgba(251,249,245,.06); border: 1px solid rgba(251,249,245,.14); }
 .warum__claim strong { margin-top: 0.5rem; }
-[data-fact].is-on .task.is-ai { background: rgba(218,184,128,.92); color: #232722; }
 .proof__num--word { line-height: 1.05; }
 .proof__label { font-weight: 700; }
 
